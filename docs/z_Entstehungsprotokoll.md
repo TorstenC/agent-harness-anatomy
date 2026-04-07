@@ -1,5 +1,17 @@
 # "Making of" der Dokumentation zum Agent Harness
 
+Das Original ist natürlich gelöscht:
+
+![claude-code/v/2.1.88](./assets/Pasted_Image_0.png)  
+<https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.1.88>
+
+Aber es gibt Commmits von 31.03.2026:
+
+| Repository | Commit | Zeitstempel |
+| --- | --- | --- |
+| [ultraworkers/claw-code](https://github.com/ultraworkers/claw-code?tab=readme-ov-file#readme) | [`5a774a2`](https://github.com/ultraworkers/claw-code/tree/5a774a2b62d7949c1d94e0b726281554d7893cfd) | Mar 31, 2026, 11:00 AM GMT+2 |
+| [Exhen/claude-code-2.1.88](https://github.com/Exhen/claude-code-2.1.88?tab=readme-ov-file#readme) | [`2008cd9`](https://github.com/Exhen/claude-code-2.1.88/tree/2008cd913996f1fa830815626a6479295b1e0786) | Mar 31, 2026, 11:20 AM GMT+2 |
+
 ## GPT-4.1
 
 Hier ist, wie du das Agent Harness in deinem Workspace analysieren und dokumentieren kannst:
@@ -228,10 +240,32 @@ Sobald du das Repo erstellt und geklont hast, können wir dort mit Kapitel 3 wei
 
 ---
 
+> Unser Thread wird verloren gehen, wenn wir in dem Repo fortfahren.
 > Möchtest du (von dir für dich im Follow Up Thread) noch etwas am Ende des "Making of" ergänzen?  
 > Du könntest dir z.B. noch eine kurze Reflexion über die Herausforderungen und Erkenntnisse beim Schreiben der Dokumentation ergänzen.
 
 ## Claude Opus 4.6 (4) – Reflexion & Arbeitsstand
+
+Gute Idee – ich ergänze am Ende des Making-of eine Reflexion und einen klaren Arbeitsstand für den nächsten Thread.
+
+- Read `z_MAKING_OF.md`, lines 195 to 220
+- Read `z_MAKING_OF.md`, lines 220 to 243
+- Using "Replace String in File"
+- Checked `z_MAKING_OF.md`, no problems found
+
+Fertig. Ich habe unter **"Claude Opus 4.6 (4)"** folgende Abschnitte ergänzt:
+
+| Abschnitt | Zweck |
+| --- | --- |
+| **Wie die Dokumentation entstanden ist** | Methodik: ~5.000 Zeilen aus ~15 Schlüsseldateien gelesen, Top-Down-Analyse, Diagramme als Denkwerkzeug |
+| **Was gut funktioniert hat** | Lob an den Originalcode: exzellente Kommentare, konsistente Patterns, cleveres State-Modell |
+| **Was herausfordernd war** | Zirkuläre Dependencies, 4.684-Zeilen main.tsx, Feature-Gate-Explosion |
+| **Arbeitsstand-Tabelle** | Alle 6 Kapitel + README mit Status und nächstem Schritt |
+| **Hinweise an den nächsten Claude-Thread** | Wo der Quellcode liegt, welchen Stil beibehalten, warum Kapitel 3 als nächstes, und welche Dateien dafür tiefer analysiert werden müssen |
+
+Damit hat der nächste Thread alles, was er braucht, um nahtlos mit Kapitel 3 weiterzumachen.
+
+- Made changes.
 
 ### Wie die Dokumentation entstanden ist
 
@@ -404,3 +438,111 @@ Die `QueryEngine`[⧉](Quellenverzeichnis.md#src-queryengine) besitzt den gesamt
 | **Rechtliche Klarheit** | ✅ Disclaimer im Quellenverzeichnis, keine Code-Reproduktion, reine Verlinkung |
 | **Lesbarkeit der Kapitel** | ✅ Kapiteltext bleibt sauber, kein Link-Clutter |
 | **Respekt vor Anthropic** | ✅ Expliziter Hinweis auf geistiges Eigentum + Bereitschaft zur Link-Entfernung |
+
+---
+
+> Der 'pages build and deployment workflow' verarbeitet die Markdown-Links nicht als solche.
+> Sollten wir die Links alle wie folgt anlegen?
+>
+> ```markdown
+> <a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/main.tsx" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/main.tsx" target="sourcecode">EX</a>
+> ```
+>
+> Falls ja, dann einfach so umsetsen, committen und pushen, bitte.
+
+### Claude Opus 4.6 (8) – Markdown-Links in HTML-`<a>`-Tags umwandeln
+
+Ja, innerhalb von `<table>`-HTML-Blöcken werden Markdown-Links `[text](url)` nicht geparst — das ist eine bekannte Eigenheit von GitHub Pages / Jekyll. Die `<a href>`-Variante ist die richtige Lösung.
+
+- Read `y_Quellenverzeichnis.md#1-1`, lines 1 to 250
+- Read `y_Quellenverzeichnis.md#250-250`, lines 250 to 305
+
+Ich sehe 19 Stellen mit Markdown-Links `[UW](...) · [EX](...)` die in `<a href>`-Tags umgewandelt werden müssen. Die erste (`src-main`) hat schon das richtige Format als Vorlage. Ich baue jetzt ein Skript, das alle auf einmal konvertiert:
+
+- Ran terminal command:
+
+  ```bash
+  sed -n '/\[UW\](https:\/\/github/p' docs/y_Quellenverzeichnis.md | wc -l
+  ```
+  
+- Ran terminal command:
+
+  ```bash
+  sed -i -E 's|\[UW\]\((https://github\.com/ultraworkers/claw-code/blob/[^)]+)\) · \[EX\]\((https://github\.com/Exhen/claude-code-2\.1\.88/blob/[^)]+)\)|<a href="\1" target="sourcecode">UW</a> · <a href="\2" target="sourcecode">EX</a>|g' docs/y_Quellenverzeichnis.md
+  ```
+
+Prüfe ob noch Markdown-Links übrig sind:
+
+- Ran terminal command:  
+  `grep -n '\[UW\](https://github' docs/y_Quellenverzeichnis.md`
+
+Keine übrig. Jetzt entferne ich noch die überflüssigen Leerzeilen, die durch das Markdown-Format in den `<td>`-Zellen standen. Die `src-main`-Zeile zeigt das Ziel-Format — kompakt auf einer Zeile:
+
+- Ran terminal command:
+ `grep -n 'target="sourcecode"' docs/y_Quellenverzeichnis.md | head -5`
+
+Die Links sind konvertiert. Jetzt entferne ich die Leerzeilen um die `<a>`-Tags herum — die waren nur nötig für Markdown-Parsing und produzieren jetzt unnötige Whitespace:
+
+- Ran terminal command:
+
+   ```bash
+   cd ~/Repos/agent-harness-anatomy && python3 -c "
+   import re
+
+   with open('docs/y_Quellenverzeichnis.md', 'r') as f:
+     content = f.read()
+
+   # Pattern: <td> followed by blank lines, then the <a> link, then blank lines, then </td>
+   # Replace with compact: <td> newline link newline </td>
+   content = re.sub(
+      r'<td>\n\n(<a href=)',
+      r'<td>\n\1',
+      content
+   )
+   content = re.sub(
+      r'(target=\"sourcecode\">EX</a>)\n\n</td>',
+      r'\1\n</td>',
+      content
+   )
+
+   with open('docs/y_Quellenverzeichnis.md', 'w') as f:
+      f.write(content)
+
+   print('Done')"
+   ```
+
+Entferne auch den alten auskommentierten Markdown-Kommentar bei `src-main`:
+
+- Using "Replace String in File"
+
+Die Lint-Warnungen sind nur `MD033/no-inline-html` — die sind in einer Datei, die absichtlich HTML-Tabellen verwendet, erwartbar und harmlos. Jetzt commit und push:
+
+- Ran terminal command:
+  
+  ```bash
+  git add docs/y_Quellenverzeichnis.md && git diff --cached --stat
+  ```
+
+- Ran terminal command:
+
+   ```bash
+   cd ~/Repos/agent-harness-anatomy && git commit -m "fix: Quellenverzeichnis Markdown-Links → HTML `<a>`-Tags
+
+   - Innerhalb von `<table>`-HTML-Blöcken parst GitHub Pages/Jekyll keine Markdown-Links [text](url).
+   - Alle 20 Quellenlinks auf `<a href>` mit target='sourcecode' umgestellt.
+   - Überflüssige Leerzeilen und auskommentierte Duplikate entfernt."
+   ```
+
+- Ran terminal command:
+
+  ```bash
+  git push
+  ```
+
+Erledigt. Alle 20 Quellenlinks in y_Quellenverzeichnis.md sind jetzt HTML-`<a>`-Tags mit `target="sourcecode"` (öffnet alle Quellen im selben Tab). Der Pages-Build sollte die Links jetzt korrekt rendern.
+
+- Made changes.
+
+---
+
+> …
