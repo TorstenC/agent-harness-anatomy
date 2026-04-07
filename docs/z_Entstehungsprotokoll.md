@@ -299,4 +299,62 @@ Die zwei Kapitel entstanden in einer einzigen Session mit folgendem Vorgehen:
 
 2. **Obsidian-Bildverweise in z_Entstehungsprotokoll.md** — Zwei Stellen enthalten `![[Pasted image ...]]`, die auf GitHub nicht rendern.
 
+---
+
+> Beginne mit dem Schreiben von Kapitel `# 3. Hauptkomponenten`.
+
+## Claude Opus 4.6 (6) – Kapitel 3
+
+Ich beginne mit der Analyse der Quelldateien für Kapitel 3. Zuerst lese ich die Kerndateien, die die Hauptkomponenten definieren. 
+
+- Created 4 todos
+- Starting (2/4) *Quelldateien analysieren (Runde 2)*
+- Now let me look at specific tool implementations and the coordinator module: 
+- Now let me read the existing docs to maintain consistency: 
+- Now let me read the remaining critical sections and check agent loading: 
+- I now have sufficient context to write a comprehensive Kapitel 3. Let me also quickly check the services for compact/context management: 
+- Starting (3/4) *Kapitel 3 schreiben*
+- Using "Replace String in File"
+- Jetzt prüfe ich auf Fehler: 
+
+Checked [3_Hauptkomponenten.md](./3_Hauptkomponenten.md), no problems found
+
+Keine Fehler. Jetzt die README aktualisieren:
+
+- Starting (4/4) *README aktualisieren*
+- Using "Replace String in File"
+- Using "Replace String in File"
+- Checked [README.md](../README.md), no problems found
+- Completed (4/4) *README aktualisieren*
+
+Kapitel 3 ist fertig — **keine Lint-Fehler** in beiden geänderten Dateien. Hier die Zusammenfassung:
+
+## Was wurde erstellt / geändert
+
+### 3_Hauptkomponenten.md — Neues Kapitel
+
+| Abschnitt | Inhalt |
+| --- | --- |
+| **3.1 QueryEngine** | Konversations-Manager: Config, Turn-Ablauf in `submitMessage()`, interner State (mutableMessages, readFileState, usage, denials) |
+| **3.2 Query-Schleife** | `while(true)`-Loop mit 5 Phasen: Kontext-Komprimierung (6-stufige Pipeline), API-Streaming, Fehler-Recovery, Tool-Ausführung, Post-Processing. 10 Return-Reasons. State-Objekt. |
+| **3.3 Tool-System** | Drei Schichten: **Interface** (`Tool`, `buildTool()`, `ToolUseContext`), **Registry** (`getAllBaseTools → getTools → assembleToolPool`), **Ausführung** (`partitionToolCalls`, `StreamingToolExecutor`, `runToolUse`) |
+| **3.4 Command-System** | 3 Command-Typen (prompt/local/local-jsx), 6 Quellen, Availability-Filter, Skill-Invocation |
+| **3.5 Konkrete Tools** | BashTool (semantische Befehlsanalyse, Sandbox, Security), AgentTool (Sub-Agenten, Isolation, Background), Coordinator-Modus |
+| **3.6 Tool-Referenz** | Tabelle aller ~40 Built-in Tools mit Kategorie, Parallel-Fähigkeit, Feature Gate |
+| **3.7 Skills & Plugins** | Lade-Hierarchie, Frontmatter-Felder, Plugin-System |
+| **3.8 Zusammenfassung** | End-to-End-Datenfluss-Diagramm durch alle Komponenten |
+
+### README.md — Zwei Änderungen
+
+1. Kapitel 3 Status: `🔲` → `✅` mit vollständiger Inhaltsbeschreibung
+2. `z_Entstehungsprotokoll.md` in die Projektstruktur aufgenommen
+
+### Quellcode-Basis
+
+Analysierte Dateien für Kapitel 3: QueryEngine.ts, query.ts, `Tool.ts`, tools.ts, commands.ts, command.ts, toolOrchestration.ts, StreamingToolExecutor.ts, toolExecution.ts, AgentTool.tsx, runAgent.ts, loadAgentsDir.ts, constants.ts, BashTool.tsx, coordinatorMode.ts, loadSkillsDir.ts.
+
+- Made changes.
+
+---
+
 > ...
