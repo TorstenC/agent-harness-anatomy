@@ -653,4 +653,9 @@ Fertig. Was eingerichtet wurde:
 
 ---
 
-> …
+> Magst du die README.md einmal redigieren, ob sie noch den aktuellen Stand der Dinge widerspiegelt?
+> Du kannst auch schon die Links bis `docs/6_API-Referenz.md` anlegen, auch wenn die Kapitel noch nicht geschrieben sind.
+> magst du als Nächstes Kapitel '# 4. Typische Abläufe' schreiben?
+> Falls keine Unsicherheiten bestehen, dann committe und pushe die Änderungen bitte gleich.
+
+## Claude Opus 4.6 – README-Update & Kapitel 4

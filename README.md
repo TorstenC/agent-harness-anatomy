@@ -44,13 +44,13 @@ Die Dokumentation in diesem Repository erklärt, wie diese drei Teile zusammensp
 ## Dokumentation
 
 | Kapitel | Status | Inhalt |
-| --- | --- | --- |
+| --- | :---: | --- |
 | [1.‌‌‌ Einleitung & Zweck](https://torstenc.github.io/agent-harness-anatomy/1_Einleitung_&_Zweck) | ✅ | Was ist Claude Code? Was ist ein Agent Harness? Technologiestack |
 | [2. Architekturübersicht](https://torstenc.github.io/agent-harness-anatomy/2_Architekturübersicht) | ✅ | 9-Schichten-Modell, Startup-Ablauf, Query-Lifecycle, State-Management, Berechtigungen, Feature Flags |
 | [3. Hauptkomponenten](https://torstenc.github.io/agent-harness-anatomy/3_Hauptkomponenten) | ✅ | QueryEngine, Query-Schleife, Tool-System (Interface, Registry, Ausführung), Command-System, AgentTool, BashTool, Coordinator, Skills/Plugins |
-| 4. Typische Abläufe | 🔲 | Sequenzdiagramme: Startup, Query, Tool-Ausführung, Agent-Spawning (geplant) |
-| 5. Erweiterungsmöglichkeiten | 🔲 | Plugin-System, Skill-System, MCP-Integration, Custom Agents (geplant) |
-| 6. API-Referenz | 🔲 | Wichtige Typen, Interfaces und Funktionen (geplant) |
+| [4. Typische Abläufe](https://torstenc.github.io/agent-harness-anatomy/4_Typische_Abläufe) | 🔲 | Sequenzdiagramme: Startup, Query, Tool-Ausführung, Agent-Spawning (geplant) |
+| [5. Erweiterungsmöglichkeiten](https://torstenc.github.io/agent-harness-anatomy/5_Erweiterungsmöglichkeiten) | 🔲 | Plugin-System, Skill-System, MCP-Integration, Custom Agents (geplant) |
+| [6. API-Referenz](https://torstenc.github.io/agent-harness-anatomy/6_API-Referenz) | 🔲 | Wichtige Typen, Interfaces und Funktionen (geplant) |
 | Anhang: [Quellenverzeichnis](https://torstenc.github.io/agent-harness-anatomy/y_Quellenverzeichnis) | ✅ | Analysierte Quelldateien mit Links zu zwei öffentlichen Mirrors |
 | Anhang: [Entstehungsprotokoll](https://torstenc.github.io/agent-harness-anatomy/z_Entstehungsprotokoll) | ✅ | Making-of, Analyseprozess, Herausforderungen, Learnings |
 
@@ -103,6 +103,9 @@ Jeder Tool-Aufruf durchläuft eine **5-stufige Permission-Pipeline**: Config-Rul
 │   ├── 1_Einleitung_&_Zweck.md        ← Was und warum
 │   ├── 2_Architekturübersicht.md       ← Wie es zusammenhängt
 │   ├── 3_Hauptkomponenten.md           ← Detailanalyse der Kernmodule
+│   ├── 4_Typische_Abläufe.md           ← Sequenzdiagramme (in Arbeit)
+│   ├── 5_Erweiterungsmöglichkeiten.md  ← Plugins, Skills, MCP (in Arbeit)
+│   ├── 6_API-Referenz.md               ← Typen & Interfaces (in Arbeit)
 │   ├── y_Quellenverzeichnis.md         ← Analysierte Quelldateien mit Links
 │   └── z_Entstehungsprotokoll.md       ← Making-of & Entstehungsprotokoll
 └── src/                               ← NICHT im Repo (siehe .gitignore)
