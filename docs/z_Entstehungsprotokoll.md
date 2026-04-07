@@ -108,7 +108,7 @@ Jetzt habe ich genug Kontext. Ich schreibe das vollständige erste Kapitel:
 
 Die Lint-Warnungen betreffen nur Markdown-Formatierungsdetails (Tabellen-Spacing und Heading-Abstände). Ich korrigiere die wichtigsten:
 
-- Read [1_Einleitung_&_Zweck](1_Einleitung_&_Zweck.md)
+- Read [1_Einleitung_&_Zweck](./1_Einleitung_&_Zweck.md)
 
 Ich behebe nun die Markdown-Lint-Warnungen:
 
@@ -117,7 +117,7 @@ Ich behebe nun die Markdown-Lint-Warnungen:
 - Using "Replace String in File"
 - Using "Replace String in File"
 - Using "Replace String in File"
-- Checked [1_Einleitung_&_Zweck](1_Einleitung_&_Zweck.md), no problems found
+- Checked [1_Einleitung_&_Zweck](https://torstenc.github.io/agent-harness-anatomy/1_Einleitung_&_Zweck), no problems found
 
 Completed (3/3) *Einleitung & Zweck schreiben*
 
@@ -191,18 +191,18 @@ Guter Plan! Das ist pragmatischer – GitHub WebUI erstellt dir direkt `main`-Br
 
 Ich bereite in der Zwischenzeit die README.md vor, damit du sie direkt ins neue Repo kopieren kannst:
 
-- Read [README.md](./README.md#1-1), lines 1 to 50
+- Read [README.md](../README.md#1-1), lines 1 to 50
 - Read [.gitignore](../.gitignore)
 - Read [docs](.)
 
 Die README ist bereits gut vorbereitet! Ich ergänze sie um die fehlenden Abschnitte (Technologiestack-Kurzreferenz, Repo-Struktur, Lizenz/Disclaimer, Mitmach-Hinweis):
 
-Read [README.md](./README.md#50-50), lines 50 to 113
+Read [README.md](../README.md#50-50), lines 50 to 113
 
 Die README ist bereits vollständig und gut strukturiert. Sie hat alles, was ein gutes Repo braucht. Ich nehme nur kleine Verfeinerungen vor:
 
 - Using "Replace String in File"
-- Checked [README.md](../README.md), no problems found
+- Checked [README.md](https://github.com/TorstenC/agent-harness-anatomy/blob/main/README.md), no problems found
 
 Die README ist fertig und lint-sauber. Hier die **Dateien, die ins neue GitHub-Repo gehören**:
 
@@ -305,26 +305,26 @@ Die zwei Kapitel entstanden in einer einzigen Session mit folgendem Vorgehen:
 
 ## Claude Opus 4.6 (6) – Kapitel 3
 
-Ich beginne mit der Analyse der Quelldateien für Kapitel 3. Zuerst lese ich die Kerndateien, die die Hauptkomponenten definieren. 
+Ich beginne mit der Analyse der Quelldateien für Kapitel 3. Zuerst lese ich die Kerndateien, die die Hauptkomponenten definieren.
 
 - Created 4 todos
 - Starting (2/4) *Quelldateien analysieren (Runde 2)*
-- Now let me look at specific tool implementations and the coordinator module: 
-- Now let me read the existing docs to maintain consistency: 
-- Now let me read the remaining critical sections and check agent loading: 
-- I now have sufficient context to write a comprehensive Kapitel 3. Let me also quickly check the services for compact/context management: 
+- Now let me look at specific tool implementations and the coordinator module:
+- Now let me read the existing docs to maintain consistency:
+- Now let me read the remaining critical sections and check agent loading:
+- I now have sufficient context to write a comprehensive Kapitel 3. Let me also quickly check the services for compact/context management:
 - Starting (3/4) *Kapitel 3 schreiben*
 - Using "Replace String in File"
-- Jetzt prüfe ich auf Fehler: 
+- Jetzt prüfe ich auf Fehler:
 
-Checked [3_Hauptkomponenten.md](./3_Hauptkomponenten.md), no problems found
+Checked [3_Hauptkomponenten.md](https://torstenc.github.io/agent-harness-anatomy/3_Hauptkomponenten.md), no problems found
 
 Keine Fehler. Jetzt die README aktualisieren:
 
 - Starting (4/4) *README aktualisieren*
 - Using "Replace String in File"
 - Using "Replace String in File"
-- Checked [README.md](../README.md), no problems found
+- Checked [README.md](https://github.com/TorstenC/agent-harness-anatomy/blob/main/README.md), no problems found
 - Completed (4/4) *README aktualisieren*
 
 Kapitel 3 ist fertig — **keine Lint-Fehler** in beiden geänderten Dateien. Hier die Zusammenfassung:
@@ -357,4 +357,50 @@ Analysierte Dateien für Kapitel 3: QueryEngine.ts, query.ts, `Tool.ts`, tools.t
 
 ---
 
-> ...
+> Die Dateien unter /src, die wir in den Kapiteln erwähnen, sind öffentlich abgelegt.
+> Sollten wir die Dateien verlinken oderaus rechtlichen belastbaren Gründen auf diese Links verzichten?
+
+## Claude Opus 4.6 (7) – Rechtliche Einschätzung & Empfehlung
+
+Das ist eine durchdachte Frage. Hier meine Einschätzung:
+
+## Rechtliche Lage
+
+Der Code wurde **versehentlich veröffentlicht** — Anthropic hat ihn nicht unter einer Open-Source-Lizenz freigegeben. Das bedeutet:
+
+- **Urheberrecht liegt bei Anthropic** — unabhängig davon, dass der Code öffentlich zugänglich ist
+- **Verlinkung ≠ Verbreitung** — einen Link zu setzen ist rechtlich etwas anderes als Code zu kopieren oder zu hosten
+- **Deine Dokumentation ist ein eigenständiges Werk** — Analyse und Kommentar sind durch Fair Use / Zitatrecht gedeckt, solange kein substantieller Code reproduziert wird
+
+Die beiden GitHub-Repos (ultraworkers, Exhen) sind **nicht deine** — du hostest den Code nicht, du verweist nur darauf. Das ist vergleichbar mit einer wissenschaftlichen Arbeit, die auf eine Quelle verweist.
+
+## Empfehlung: Separate Quellennachweis-Datei mit Ankern
+
+Eine Quellennachweis-Datei ist die beste Balance aus **Nachvollziehbarkeit**, **Wartbarkeit** und **rechtlicher Vorsicht**:
+
+- [y_Quellenverzeichnis.md](y_Quellenverzeichnis.md):  
+  Alle relevanten Dateien mit Ankern (`#src-queryengine`, `#src-toolorchestration`, etc.)
+
+## Verwendung in den Kapiteln
+
+In den Dokumentations-Kapiteln wird dann so verwiesen:
+
+```markdown
+Die `QueryEngine` ([Quelle](Quellenverzeichnis.md#src-queryengine)) besitzt den gesamten Lebenszyklus…
+```
+
+Oder kürzer als Fußnoten-Stil:
+
+```markdown
+Die `QueryEngine`[⧉](Quellenverzeichnis.md#src-queryengine) besitzt den gesamten Lebenszyklus…
+```
+
+## Warum diese Lösung?
+
+| Kriterium | Bewertung |
+| --- | --- |
+| **Nachvollziehbarkeit** | ✅ Jede Aussage ist quellenbelegt, zwei unabhängige Mirrors |
+| **Wartbarkeit** | ✅ Links nur an einer Stelle pflegen; falls ein Repo verschwindet → eine Datei anpassen |
+| **Rechtliche Klarheit** | ✅ Disclaimer im Quellenverzeichnis, keine Code-Reproduktion, reine Verlinkung |
+| **Lesbarkeit der Kapitel** | ✅ Kapiteltext bleibt sauber, kein Link-Clutter |
+| **Respekt vor Anthropic** | ✅ Expliziter Hinweis auf geistiges Eigentum + Bereitschaft zur Link-Entfernung |

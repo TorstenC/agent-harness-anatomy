@@ -51,6 +51,7 @@ Die Dokumentation in diesem Repository erklärt, wie diese drei Teile zusammensp
 | 4. Typische Abläufe | 🔲 | Sequenzdiagramme: Startup, Query, Tool-Ausführung, Agent-Spawning (geplant) |
 | 5. Erweiterungsmöglichkeiten | 🔲 | Plugin-System, Skill-System, MCP-Integration, Custom Agents (geplant) |
 | 6. API-Referenz | 🔲 | Wichtige Typen, Interfaces und Funktionen (geplant) |
+| Anhang: [Quellenverzeichnis](https://torstenc.github.io/agent-harness-anatomy/y_Quellenverzeichnis) | ✅ | Analysierte Quelldateien mit Links zu zwei öffentlichen Mirrors |
 | Anhang: [Entstehungsprotokoll](https://torstenc.github.io/agent-harness-anatomy/z_Entstehungsprotokoll) | ✅ | Making-of, Analyseprozess, Herausforderungen, Learnings |
 
 ## Kernerkenntnisse
@@ -102,6 +103,7 @@ Jeder Tool-Aufruf durchläuft eine **5-stufige Permission-Pipeline**: Config-Rul
 │   ├── 1_Einleitung_&_Zweck.md        ← Was und warum
 │   ├── 2_Architekturübersicht.md       ← Wie es zusammenhängt
 │   ├── 3_Hauptkomponenten.md           ← Detailanalyse der Kernmodule
+│   ├── y_Quellenverzeichnis.md         ← Analysierte Quelldateien mit Links
 │   └── z_Entstehungsprotokoll.md       ← Making-of & Entstehungsprotokoll
 └── src/                               ← NICHT im Repo (siehe .gitignore)
     └── (Originalcode via Link oben)
