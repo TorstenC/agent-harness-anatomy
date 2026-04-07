@@ -31,9 +31,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/main.tsx</code></td>
 <td>1, 2, 3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/main.tsx) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/main.tsx)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/main.tsx" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/main.tsx" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -42,9 +40,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/QueryEngine.ts</code></td>
 <td>2, 3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/QueryEngine.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/QueryEngine.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/QueryEngine.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/QueryEngine.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -53,9 +49,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/query.ts</code></td>
 <td>2, 3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/query.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/query.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/query.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/query.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -64,9 +58,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/Tool.ts</code></td>
 <td>1, 2, 3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/Tool.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/Tool.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/Tool.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/Tool.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -75,9 +67,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/tools.ts</code></td>
 <td>1, 3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/tools.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/tools.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/tools.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/tools.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -86,9 +76,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/commands.ts</code></td>
 <td>1, 3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/commands.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/commands.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/commands.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/commands.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -100,9 +88,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/setup.ts</code></td>
 <td>2</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/setup.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/setup.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/setup.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/setup.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -111,9 +97,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/entrypoints/init.ts</code></td>
 <td>2</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/entrypoints/init.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/entrypoints/init.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/entrypoints/init.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/entrypoints/init.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -122,9 +106,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/replLauncher.tsx</code></td>
 <td>2</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/replLauncher.tsx) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/replLauncher.tsx)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/replLauncher.tsx" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/replLauncher.tsx" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -133,9 +115,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/context.ts</code></td>
 <td>1, 2</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/context.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/context.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/context.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/context.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -147,9 +127,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/bootstrap/state.ts</code></td>
 <td>2</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/bootstrap/state.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/bootstrap/state.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/bootstrap/state.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/bootstrap/state.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -161,9 +139,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/services/tools/toolOrchestration.ts</code></td>
 <td>2, 3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/services/tools/toolOrchestration.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/services/tools/toolOrchestration.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/services/tools/toolOrchestration.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/services/tools/toolOrchestration.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -172,9 +148,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/services/tools/StreamingToolExecutor.ts</code></td>
 <td>2, 3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/services/tools/StreamingToolExecutor.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/services/tools/StreamingToolExecutor.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/services/tools/StreamingToolExecutor.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/services/tools/StreamingToolExecutor.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -183,9 +157,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/services/tools/toolExecution.ts</code></td>
 <td>3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/services/tools/toolExecution.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/services/tools/toolExecution.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/services/tools/toolExecution.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/services/tools/toolExecution.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -197,9 +169,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/tools/AgentTool/AgentTool.tsx</code></td>
 <td>1, 3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/tools/AgentTool/AgentTool.tsx) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/tools/AgentTool/AgentTool.tsx)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/tools/AgentTool/AgentTool.tsx" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/tools/AgentTool/AgentTool.tsx" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -208,9 +178,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/tools/AgentTool/runAgent.ts</code></td>
 <td>3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/tools/AgentTool/runAgent.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/tools/AgentTool/runAgent.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/tools/AgentTool/runAgent.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/tools/AgentTool/runAgent.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -219,9 +187,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/tools/AgentTool/loadAgentsDir.ts</code></td>
 <td>3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/tools/AgentTool/loadAgentsDir.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/tools/AgentTool/loadAgentsDir.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/tools/AgentTool/loadAgentsDir.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/tools/AgentTool/loadAgentsDir.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -230,9 +196,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/tools/BashTool/BashTool.tsx</code></td>
 <td>3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/tools/BashTool/BashTool.tsx) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/tools/BashTool/BashTool.tsx)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/tools/BashTool/BashTool.tsx" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/tools/BashTool/BashTool.tsx" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -244,9 +208,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/coordinator/coordinatorMode.ts</code></td>
 <td>1, 2, 3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/coordinator/coordinatorMode.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/coordinator/coordinatorMode.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/coordinator/coordinatorMode.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/coordinator/coordinatorMode.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -258,9 +220,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/hooks/PermissionContext.ts</code></td>
 <td>2</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/hooks/PermissionContext.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/hooks/PermissionContext.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/hooks/PermissionContext.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/hooks/PermissionContext.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -272,9 +232,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/skills/loadSkillsDir.ts</code></td>
 <td>3</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/skills/loadSkillsDir.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/skills/loadSkillsDir.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/skills/loadSkillsDir.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/skills/loadSkillsDir.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -286,9 +244,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/services/mcp/client.ts</code></td>
 <td>2</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/services/mcp/client.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/services/mcp/client.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/services/mcp/client.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/services/mcp/client.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 
@@ -297,9 +253,7 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 <td><code>src/bridge/bridgeMain.ts</code></td>
 <td>2</td>
 <td>
-
-[UW](https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/bridge/bridgeMain.ts) · [EX](https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/bridge/bridgeMain.ts)
-
+<a href="https://github.com/ultraworkers/claw-code/blob/5a774a2b62d7949c1d94e0b726281554d7893cfd/src/bridge/bridgeMain.ts" target="sourcecode">UW</a> · <a href="https://github.com/Exhen/claude-code-2.1.88/blob/2008cd913996f1fa830815626a6479295b1e0786/source/src/bridge/bridgeMain.ts" target="sourcecode">EX</a>
 </td>
 </tr>
 </table>
