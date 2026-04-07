@@ -2,7 +2,7 @@
 
 > Wie macht man aus einem reinen LLM-Textgenerator einen handlungsfähigen Software-Engineering-Agenten?
 
-Dieses Repository dokumentiert und analysiert die interne Architektur von **Claude Code** — Anthropics offiziellem CLI-Tool, das das KI-Modell Claude über eine Laufzeitumgebung (Agent Harness) mit realen Werkzeugen verbindet: Shell, Dateisystem, Web, IDE-Integration und mehr.
+[Dieses Repository](https://github.com/TorstenC/agent-harness-anatomy?tab=readme-ov-file#readme) dokumentiert und analysiert die interne Architektur von **Claude Code** — Anthropics offiziellem CLI-Tool, das das KI-Modell Claude über eine Laufzeitumgebung (Agent Harness) mit realen Werkzeugen verbindet: Shell, Dateisystem, Web, IDE-Integration und mehr.
 
 ## Hintergrund
 

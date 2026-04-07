@@ -20,11 +20,12 @@ Die Links dienen ausschließlich der wissenschaftlichen Nachvollziehbarkeit
 ## Quelldateien
 
 <!-- Anker-Format: id="src-dateiname" -->
-
-<!-- ### Kern-Module -->
+<!-- markdownlint-disable MD033 -->
 
 <table>
 <tr><th>Anker</th><th>Datei</th><th>Kapitel</th><th>Links</th></tr>
+
+<!-- ### Kern-Module -->
 <tr><th>Kern-Module</th><td colspan=3></td></tr>
 <tr id="src-main">
 <td><code>src-main</code></td>

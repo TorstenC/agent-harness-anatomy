@@ -12,7 +12,7 @@ Aber es gibt Commmits von 31.03.2026:
 | [ultraworkers/claw-code](https://github.com/ultraworkers/claw-code?tab=readme-ov-file#readme) | [`5a774a2`](https://github.com/ultraworkers/claw-code/tree/5a774a2b62d7949c1d94e0b726281554d7893cfd) | Mar 31, 2026, 11:00 AM GMT+2 |
 | [Exhen/claude-code-2.1.88](https://github.com/Exhen/claude-code-2.1.88?tab=readme-ov-file#readme) | [`2008cd9`](https://github.com/Exhen/claude-code-2.1.88/tree/2008cd913996f1fa830815626a6479295b1e0786) | Mar 31, 2026, 11:20 AM GMT+2 |
 
-## GPT-4.1
+## GPT-4.1 – Analyseprozess
 
 Hier ist, wie du das Agent Harness in deinem Workspace analysieren und dokumentieren kannst:
 
@@ -83,7 +83,7 @@ Hier ist, wie du das Agent Harness in deinem Workspace analysieren und dokumenti
 
 > Erstelle bitte das erste Kapitel "Einleitung & Zweck" in `Einleitung_&_Zweck.md`.
 
-## Claude Opus 4.6 (1)
+## Claude Opus 4.6 – Einleitung & Zweck
 
 Ich werde zunächst die wichtigsten Quelldateien analysieren, um eine fundierte Einleitung zu schreiben.
 
@@ -153,7 +153,7 @@ Alle Inhalte basieren auf der tatsächlichen Analyse der Quellcode-Dateien (main
 > Magst du in diesem Stil bitte ein nächstes Kapitel erstellen?  
 > Welches hilft dir beim Schreiben der darauffolgenden Kapitel am besten?
 
-## Claude Opus 4.6 (2)
+## Claude Opus 4.6 – Kapitel 2: Architekturübersicht
 
 Ich werde mit **Kapitel 2 – Architekturübersicht** beginnen, da es die Grundlage für alle Folgekapitel bildet. Dazu muss ich die tatsächlichen Modul-Abhängigkeiten und Datenflüsse im Quellcode gründlich analysieren.
 
@@ -197,7 +197,7 @@ Alle Inhalte basieren auf der direkten Analyse von main.tsx, init.ts, setup.ts, 
 > Magst du eine gute README.md erstellen?  
 > Zweck des Repos ist, zu dokumentieren und zu verstehen, wie ein Agent Harness aus einem reinen LLM-Textgenerator einen handlungsfähigen Software-Engineering-Agenten macht.
 
-## Claude Opus 4.6 (3)
+## Claude Opus 4.6 – README.md erstellen
 
 Guter Plan! Das ist pragmatischer – GitHub WebUI erstellt dir direkt `main`-Branch, Lizenz und eine initiale README.
 
@@ -244,7 +244,7 @@ Sobald du das Repo erstellt und geklont hast, können wir dort mit Kapitel 3 wei
 > Möchtest du (von dir für dich im Follow Up Thread) noch etwas am Ende des "Making of" ergänzen?  
 > Du könntest dir z.B. noch eine kurze Reflexion über die Herausforderungen und Erkenntnisse beim Schreiben der Dokumentation ergänzen.
 
-## Claude Opus 4.6 (4) – Reflexion & Arbeitsstand
+## Claude Opus 4.6 – Reflexion & Arbeitsstand
 
 Gute Idee – ich ergänze am Ende des Making-of eine Reflexion und einen klaren Arbeitsstand für den nächsten Thread.
 
@@ -314,9 +314,9 @@ Die zwei Kapitel entstanden in einer einzigen Session mit folgendem Vorgehen:
 
 > Bitte mache vor dem Commit & Push noch ein kurzes Review.
 
-## Claude Opus 4.6 (5) – Review
+## Claude Opus 4.6 – Review
 
-### ⚠️ Kleinigkeiten zum Beheben
+**⚠️ Kleinigkeiten zum Beheben:**
 
 1. **z_Entstehungsprotokoll.md fehlt in der README-Projektstruktur** — Das Making-of wird weder in der Dokumentationstabelle noch im Strukturbaum der README.md erwähnt. Da es ein Meta-Dokument ist, sollte es zumindest im Strukturbaum auftauchen:
 
@@ -337,7 +337,7 @@ Die zwei Kapitel entstanden in einer einzigen Session mit folgendem Vorgehen:
 
 > Beginne mit dem Schreiben von Kapitel `# 3. Hauptkomponenten`.
 
-## Claude Opus 4.6 (6) – Kapitel 3
+## Claude Opus 4.6 – Kapitel 3
 
 Ich beginne mit der Analyse der Quelldateien für Kapitel 3. Zuerst lese ich die Kerndateien, die die Hauptkomponenten definieren.
 
@@ -363,7 +363,7 @@ Keine Fehler. Jetzt die README aktualisieren:
 
 Kapitel 3 ist fertig — **keine Lint-Fehler** in beiden geänderten Dateien. Hier die Zusammenfassung:
 
-## Was wurde erstellt / geändert
+**Was wurde erstellt / geändert:**
 
 ### 3_Hauptkomponenten.md — Neues Kapitel
 
@@ -394,11 +394,11 @@ Analysierte Dateien für Kapitel 3: QueryEngine.ts, query.ts, `Tool.ts`, tools.t
 > Die Dateien unter /src, die wir in den Kapiteln erwähnen, sind öffentlich abgelegt.
 > Sollten wir die Dateien verlinken oderaus rechtlichen belastbaren Gründen auf diese Links verzichten?
 
-## Claude Opus 4.6 (7) – Rechtliche Einschätzung & Empfehlung
+## Claude Opus 4.6 – Rechtliche Einschätzung & Empfehlung
 
 Das ist eine durchdachte Frage. Hier meine Einschätzung:
 
-## Rechtliche Lage
+### Rechtliche Lage
 
 Der Code wurde **versehentlich veröffentlicht** — Anthropic hat ihn nicht unter einer Open-Source-Lizenz freigegeben. Das bedeutet:
 
@@ -408,14 +408,14 @@ Der Code wurde **versehentlich veröffentlicht** — Anthropic hat ihn nicht unt
 
 Die beiden GitHub-Repos (ultraworkers, Exhen) sind **nicht deine** — du hostest den Code nicht, du verweist nur darauf. Das ist vergleichbar mit einer wissenschaftlichen Arbeit, die auf eine Quelle verweist.
 
-## Empfehlung: Separate Quellennachweis-Datei mit Ankern
+### Empfehlung: Separate Quellennachweis-Datei mit Ankern
 
 Eine Quellennachweis-Datei ist die beste Balance aus **Nachvollziehbarkeit**, **Wartbarkeit** und **rechtlicher Vorsicht**:
 
 - [y_Quellenverzeichnis.md](y_Quellenverzeichnis.md):  
   Alle relevanten Dateien mit Ankern (`#src-queryengine`, `#src-toolorchestration`, etc.)
 
-## Verwendung in den Kapiteln
+### Verwendung in den Kapiteln
 
 In den Dokumentations-Kapiteln wird dann so verwiesen:
 
@@ -429,7 +429,7 @@ Oder kürzer als Fußnoten-Stil:
 Die `QueryEngine`[⧉](Quellenverzeichnis.md#src-queryengine) besitzt den gesamten Lebenszyklus…
 ```
 
-## Warum diese Lösung?
+### Warum diese Lösung?
 
 | Kriterium | Bewertung |
 | --- | --- |
@@ -450,7 +450,7 @@ Die `QueryEngine`[⧉](Quellenverzeichnis.md#src-queryengine) besitzt den gesamt
 >
 > Falls ja, dann einfach so umsetsen, committen und pushen, bitte.
 
-### Claude Opus 4.6 (8) – Markdown-Links in HTML-`<a>`-Tags umwandeln
+## Claude Opus 4.6 – Markdown-Links in HTML-`<a>`-Tags umwandeln
 
 Ja, innerhalb von `<table>`-HTML-Blöcken werden Markdown-Links `[text](url)` nicht geparst — das ist eine bekannte Eigenheit von GitHub Pages / Jekyll. Die `<a href>`-Variante ist die richtige Lösung.
 
@@ -540,6 +540,114 @@ Die Lint-Warnungen sind nur `MD033/no-inline-html` — die sind in einer Datei, 
   ```
 
 Erledigt. Alle 20 Quellenlinks in y_Quellenverzeichnis.md sind jetzt HTML-`<a>`-Tags mit `target="sourcecode"` (öffnet alle Quellen im selben Tab). Der Pages-Build sollte die Links jetzt korrekt rendern.
+
+- Made changes.
+
+---
+
+> Welche "github.com/topics" schlägst du für unser Repo vor?
+
+## Claude Opus 4.6 – GitHub Topics
+
+| Topic                      | repositories matching |
+| -------------------------- | --------------------: |
+| agent-harness              |                    63 |
+| ai-agent                   |                 8 713 |
+| claude-code                |                16 480 |
+| anthropic                  |                 6 112 |
+| llm-architecture           |                    34 |
+| software-engineering-agent | hasn't been used, yet |
+| tool-use                   |                   321 |
+| mcp                        |                23 213 |
+| multi-agent                |                 4 224 |
+| reverse-engineering        |                 7 942 |
+| documentation              |                19 881 |
+| typescript                 |               326 315 |
+| claude-code                |                16 480 |
+| harness-engineering        |                   180 |
+| agentic-framework          |                   425 |
+| agentic-workflow           |                 1 603 |
+| orchestration              |                 2 970 |
+
+Gute Daten! Damit lässt sich eine gute Auswahl treffen.
+
+### Analyse
+
+| Kategorie | Topics | Begründung |
+| --- | --- | --- |
+| **Nische besetzen** (wenige Repos → hohe Sichtbarkeit) | `llm-architecture` (34), `agent-harness` (63), `software-engineering-agent` (0) | Hier bist du auf Seite 1. `software-engineering-agent` wärst du der Erste. |
+| **Relevantes Feld** (moderates Volumen → auffindbar ohne unterzugehen) | `tool-use` (321), `agentic-framework` (425), `harness-engineering` (180) | Genug Traffic, wenig genug Konkurrenz |
+| **Kontext-Einordnung** (großes Volumen → Zugehörigkeit signalisieren) | `claude-code` (16.480), `ai-agent` (8.713), `anthropic` (6.112) | Wer nach Claude Code sucht, soll dich finden |
+| **Weglassen** | `typescript` (326k), `documentation` (19.9k), `mcp` (23.2k), `reverse-engineering` (7.9k), `multi-agent` (4.2k) | Zu generisch, keine Differenzierung. Dein Repo ist kein MCP-Server, kein TypeScript-Projekt, kein RE-Tool. |
+
+### Empfehlung (10 Topics)
+
+```text
+software-engineering-agent
+llm-architecture
+agent-harness
+tool-use
+agentic-framework
+harness-engineering
+claude-code
+ai-agent
+anthropic
+orchestration
+```
+
+**Logik:**
+
+- **3 Nischen-Topics** (`software-engineering-agent`, `llm-architecture`, `agent-harness`) → Alleinstellung
+- **3 Mittelfeld-Topics** (`tool-use`, `agentic-framework`, `harness-engineering`) → Auffindbarkeit in der Zielgruppe
+- **3 Kontext-Topics** (`claude-code`, `ai-agent`, `anthropic`) → Zugehörigkeit zum Ökosystem
+- **1 Funktions-Topic** (`orchestration`) → beschreibt den Kern des analysierten Systems
+
+---
+
+> Die habe ich eingetragen.
+>
+> Bei der Gelegenheit habe ich unter 'About' auch <https://torstenc.github.io/agent-harness-anatomy/> als  Website eingetragen. Dazu sollten wir ein pre-commit einrichten, das die `/README.md` nach `/docs/index.md` kopiert.
+Möchtest du das  direkt erledigen?
+
+## Claude Opus 4.6 – Pre-commit Hook
+
+- Read `README.md` lines 1 to 10
+- Read `.git/hooks`
+- Searched for files matching `**/.pre-commit-config*`, no matches
+
+Kein pre-commit-Framework installiert. Ein einfacher Git-Hook reicht hier vollkommen:
+
+Created `.git/hooks/pre-commit`
+
+- Ran terminal command:
+
+  ```bash
+  chmod +x ~/Repos/agent-harness-anatomy/.git/hooks/pre-commit
+  ```
+
+Jetzt die initiale Kopie erstellen und testen:
+
+- Ran terminal command:
+
+  ```bash
+  cp README.md docs/index.md && git add docs/index.md && git status
+  ```
+
+- Ran terminal command:
+  
+  ```bash
+  cd ~/Repos/agent-harness-anatomy && git commit -m "docs: README.md als docs/index.md für GitHub Pages Homepage
+  ```
+
+Pre-commit Hook kopiert README.md → docs/index.md automatisch,
+wenn README.md im Commit enthalten ist." && git push
+
+Fertig. Was eingerichtet wurde:
+
+- **pre-commit** — kopiert README.md → index.md automatisch, aber nur wenn README.md im Commit enthalten ist
+- **index.md** — initiale Kopie, jetzt live als GitHub Pages Homepage
+
+**Hinweis:** Git-Hooks liegen in hooks und werden *nicht* ins Repo gepusht. Falls du das Repo woanders klonst, muss der Hook dort erneut eingerichtet werden. Falls das irgendwann relevant wird, können wir auf ein Framework wie `pre-commit` oder ein `Makefile`-Target umsteigen.
 
 - Made changes.
 
