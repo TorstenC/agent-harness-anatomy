@@ -51,7 +51,8 @@ Die Dokumentation in diesem Repository erklärt, wie diese drei Teile zusammensp
 | [4. Typische Abläufe](https://torstenc.github.io/agent-harness-anatomy/4_Typische_Abläufe) | ✅ | Startup-Sequenz, Query-Lifecycle, Query-Schleife, Tool-Pipeline, Fallback & Recovery, Sub-Agent-Spawning, Session-Resume, Hooks, Timing |
 | [5. Erweiterungsmöglichkeiten](https://torstenc.github.io/agent-harness-anatomy/5_Erweiterungsmöglichkeiten) | 🔲 | Plugin-System, Skill-System, MCP-Integration, Custom Agents (geplant) |
 | [6. API-Referenz](https://torstenc.github.io/agent-harness-anatomy/6_API-Referenz) | 🔲 | Wichtige Typen, Interfaces und Funktionen (geplant) |
-| Anhang: [Kommentare von Gemini](https://torstenc.github.io/agent-harness-anatomy/x_Kommentare_von_Gemini) | ✅ | Exklusive Einblicke und Kommentare von Gemini (Google bzw. Mutterkonzern Alphabet) zum Leak und zur Architektur |
+| Anhang: [Rust-Projekt claw-code](https://torstenc.github.io/agent-harness-anatomy/w_Rust-Projekt_claw-code) | ✅ | Einordnung und Abgrenzung des öffentlichen Rust-Reimplementierungsprojekts ultraworkers/claw-code |
+| Anhang: [Kommentare von Gemini](https://torstenc.github.io/agent-harness-anatomy/x_Kommentare_von_Gemini) | ✅ | Exklusive Einblicke und Kommentare von Gemini (Google/Alphabet) zum Leak und zur Architektur |
 | Anhang: [Quellenverzeichnis](https://torstenc.github.io/agent-harness-anatomy/y_Quellenverzeichnis) | ✅ | Analysierte Quelldateien mit Links zu zwei öffentlichen Mirrors |
 | Anhang: [Entstehungsprotokoll](https://torstenc.github.io/agent-harness-anatomy/z_Entstehungsprotokoll) | ✅ | Making-of, Analyseprozess, Herausforderungen, Learnings |
 
@@ -109,6 +110,7 @@ Jeder Tool-Aufruf durchläuft eine **5-stufige Permission-Pipeline**: Config-Rul
 │   ├── 4_Typische_Abläufe.md           ← Sequenzdiagramme & Abläufe
 │   ├── 5_Erweiterungsmöglichkeiten.md  ← Plugins, Skills, MCP (in Arbeit)
 │   ├── 6_API-Referenz.md               ← Typen & Interfaces (in Arbeit)
+│   ├── w_Rust-Projekt_claw-code.md     ← Einordnung des Rust-Reimplementierungsprojekts
 │   ├── x_Kommentare_von_Gemini.md      ← Kommentare von Gemini zum Leak
 │   ├── y_Quellenverzeichnis.md         ← Analysierte Quelldateien mit Links
 │   └── z_Entstehungsprotokoll.md       ← Making-of & Entstehungsprotokoll

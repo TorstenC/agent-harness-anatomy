@@ -35,3 +35,15 @@ Diese Regeln gelten für Antworten im Chat sowie für alle `.md`-Dateien im Proj
 - `docs/` — Dokumentation (wird auf GitHub Pages veröffentlicht)
 - `src/` — Quellcode (gitignored, nur lokal für Analyse vorhanden)
 - Pre-commit Hook kopiert `README.md` → `docs/index.md` automatisch
+
+## Entstehungsprotokoll (z_Entstehungsprotokoll.md)
+
+Stil-Konventionen für das Making-of:
+
+- Kapitelüberschrift: `## Claude Opus 4.6 – Thema`
+- Tool-Aufrufe als kompakte Stichpunkte: `- Read datei.ts, lines X to Y`
+- Keine rohen file-URIs oder leere Markdown-Links
+- Keine leeren Code-Blöcke
+- Keine Todo-Nummern wie `Completed (1/4)` — stattdessen Fließtext oder Stichpunkte
+- Zusammenfassungstabelle am Ende jedes Abschnitts
+- Abschluss mit `- Made changes.` und `---`

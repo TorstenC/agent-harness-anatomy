@@ -969,3 +969,35 @@ Sauber — keine Lint-Fehler. Die problematischen Stellen waren Backtick-Fragmen
 >   - CLI → Agent-Harness,
 >   - Kommentare_von_Gemini,
 >   - copilot-instructions"
+
+## Claude Opus 4.6 – README-Korrektur & Commit
+
+Drei Aufgaben aus dem Entstehungsprotokoll (Zeilen 960–972):
+
+1. README.md: „CLI-Tool" → „Agent Harness" korrigieren
+2. `x_Kommentare_von_Gemini.md` ins Repo aufnehmen
+3. `.github/copilot-instructions.md` und `x_Kommentare_von_Gemini.md` in README-Projektstruktur ergänzen
+
+- Read `README.md`, lines 1 to 10
+- Read `.github/copilot-instructions.md`
+- Searched for files matching `docs/x_Kommentare*`, 1 match (Datei existiert bereits)
+- Using "Replace String in File" (README.md: CLI-Tool → Agent Harness)
+- Searched text for `Kommentare_von_Gemini` (`README.md`), bereits in Dokumentationstabelle
+- Read `README.md`, lines 100 to 120 (Projektstruktur)
+- Using "Replace String in File" (Projektstruktur: `copilot-instructions.md` und `x_Kommentare_von_Gemini.md` ergänzt)
+- Checked `README.md`, `.github/copilot-instructions.md`, no problems found
+- Ran terminal command: `git add -A && git status`
+- Ran terminal command: `git commit` + `git push`
+
+Commit `6b7f934` gepusht. Zusammenfassung:
+
+| Änderung | Details |
+| --- | --- |
+| **README: CLI → Agent-Harness** | „Anthropics offiziellem CLI-Tool, das…" → „des **Agent Harness von Claude Code** — der Laufzeitumgebung, die…" |
+| **README: Projektstruktur** | `copilot-instructions.md` und `x_Kommentare_von_Gemini.md` ergänzt |
+| **copilot-instructions** | Backtick-Fragmente entfernt (hatten Lint-Fehler „Unknown tool" verursacht) |
+| **x_Kommentare_von_Gemini.md** | War bereits lokal vorhanden, jetzt im Repo |
+
+- Made changes.
+
+---
