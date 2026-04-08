@@ -24,6 +24,13 @@ Diese Regeln gelten für Antworten im Chat sowie für alle `.md`-Dateien im Proj
 - **Leerzeile vor und nach Code-Blöcken** (vor ` ``` ` und nach ` ``` `)
 - **Keine Leerzeile** zwischen Tabellen-Header und erster Datenzeile
 
+## README-Dokumentationstabelle
+
+In der Spalte „Kapitel" unter `## Dokumentation` in der `README.md` wird zwischen der Kapitelnummer und dem Titel ein **Narrow No-Break Space** (U+202F, UTF-8 `e2 80 af`) verwendet, damit der Eintrag nicht mitten im Wort umbricht, z. B. `5.␣Erweiterungsmöglichkeiten` (wobei `␣` = U+202F).
+
+- Kapiteleinträge: `1.` + U+202F + Titel
+- Anhang-Einträge: `Anhang:` + normales Leerzeichen (U+0020) — hier darf umbrochen werden
+
 ## Quellenverweise
 
 - Quelldateien werden in `docs/y_Quellenverzeichnis.md` zentral verlinkt

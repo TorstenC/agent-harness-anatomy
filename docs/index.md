@@ -45,12 +45,12 @@ Die Dokumentation in diesem Repository erklärt, wie diese drei Teile zusammensp
 
 | Kapitel | Status | Inhalt |
 | --- | :---: | --- |
-| [1.‌‌‌ Einleitung & Zweck](https://torstenc.github.io/agent-harness-anatomy/1_Einleitung_&_Zweck) | ✅ | Was ist Claude Code? Was ist ein Agent Harness? Technologiestack |
+| [1. Einleitung & Zweck](https://torstenc.github.io/agent-harness-anatomy/1_Einleitung_&_Zweck) | ✅ | Was ist Claude Code? Was ist ein Agent Harness? Technologiestack |
 | [2. Architekturübersicht](https://torstenc.github.io/agent-harness-anatomy/2_Architekturübersicht) | ✅ | 9-Schichten-Modell, Startup-Ablauf, Query-Lifecycle, State-Management, Berechtigungen, Feature Flags |
 | [3. Hauptkomponenten](https://torstenc.github.io/agent-harness-anatomy/3_Hauptkomponenten) | ✅ | QueryEngine, Query-Schleife, Tool-System (Interface, Registry, Ausführung), Command-System, AgentTool, BashTool, Coordinator, Skills/Plugins |
 | [4. Typische Abläufe](https://torstenc.github.io/agent-harness-anatomy/4_Typische_Abläufe) | ✅ | Startup-Sequenz, Query-Lifecycle, Query-Schleife, Tool-Pipeline, Fallback & Recovery, Sub-Agent-Spawning, Session-Resume, Hooks, Timing |
-| [5. Erweiterungsmöglichkeiten](https://torstenc.github.io/agent-harness-anatomy/5_Erweiterungsmöglichkeiten) | 🔲 | Plugin-System, Skill-System, MCP-Integration, Custom Agents (geplant) |
-| [6. API-Referenz](https://torstenc.github.io/agent-harness-anatomy/6_API-Referenz) | 🔲 | Wichtige Typen, Interfaces und Funktionen (geplant) |
+| [5. Erweiterungsmöglichkeiten](https://torstenc.github.io/agent-harness-anatomy/5_Erweiterungsmöglichkeiten) | ✅ | Skills, MCP-Server, Plugins, Custom Agents — praktischer Leitfaden mit Querverweisen |
+| [6. Ausblick](https://torstenc.github.io/agent-harness-anatomy/6_Ausblick) | ✅ | Learnings aus dem Leak, offene Fragen, nächste Generation, Vergleich mit Cursor/Windsurf/Cline/Aider |
 | Anhang: [Rust-Projekt claw-code](https://torstenc.github.io/agent-harness-anatomy/w_Rust-Projekt_claw-code) | ✅ | Einordnung und Abgrenzung des öffentlichen Rust-Reimplementierungsprojekts ultraworkers/claw-code |
 | Anhang: [Kommentare von Gemini](https://torstenc.github.io/agent-harness-anatomy/x_Kommentare_von_Gemini) | ✅ | Exklusive Einblicke und Kommentare von Gemini (Google/Alphabet) zum Leak und zur Architektur |
 | Anhang: [Quellenverzeichnis](https://torstenc.github.io/agent-harness-anatomy/y_Quellenverzeichnis) | ✅ | Analysierte Quelldateien mit Links zu zwei öffentlichen Mirrors |
@@ -108,8 +108,8 @@ Jeder Tool-Aufruf durchläuft eine **5-stufige Permission-Pipeline**: Config-Rul
 │   ├── 2_Architekturübersicht.md       ← Wie es zusammenhängt
 │   ├── 3_Hauptkomponenten.md           ← Detailanalyse der Kernmodule
 │   ├── 4_Typische_Abläufe.md           ← Sequenzdiagramme & Abläufe
-│   ├── 5_Erweiterungsmöglichkeiten.md  ← Plugins, Skills, MCP (in Arbeit)
-│   ├── 6_API-Referenz.md               ← Typen & Interfaces (in Arbeit)
+│   ├── 5_Erweiterungsmöglichkeiten.md  ← Skills, MCP, Plugins, Custom Agents
+│   ├── 6_Ausblick.md                  ← Learnings, offene Fragen, Vergleich
 │   ├── w_Rust-Projekt_claw-code.md     ← Einordnung des Rust-Reimplementierungsprojekts
 │   ├── x_Kommentare_von_Gemini.md      ← Kommentare von Gemini zum Leak
 │   ├── y_Quellenverzeichnis.md         ← Analysierte Quelldateien mit Links

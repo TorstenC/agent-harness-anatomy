@@ -123,7 +123,7 @@ Diese Dokumentation ist wie folgt aufgebaut:
 | **2. Architekturübersicht** | Gesamtstruktur, Modulabhängigkeiten, Datenflussdiagramme |
 | **3. Hauptkomponenten** | Detailbeschreibungen der Kern-Module (QueryEngine, Tool-System, Commands, Services) |
 | **4. Typische Abläufe** | Sequenzdiagramme für Startup, Query-Lifecycle, Tool-Ausführung, Agent-Spawning |
-| **5. Erweiterungsmöglichkeiten** | Plugin-System, Skill-System, MCP-Integration, Custom Agents |
-| **6. API-Referenz** | Wichtige Typen, Interfaces und Funktionen |
+| **5. Erweiterungsmöglichkeiten** | Skills, MCP-Server, Plugins, Custom Agents — praktischer Leitfaden |
+| **6. Ausblick** | Learnings aus dem Leak, offene Fragen, nächste Generation, Vergleich mit anderen Systemen |
 
 > **Hinweis:** Alle Pfadangaben beziehen sich auf das Verzeichnis `src/` des geleakten Quellcodes. Dateireferenzen wie `main.tsx` meinen `src/main.tsx`.
