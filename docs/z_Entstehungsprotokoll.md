@@ -80,7 +80,7 @@ Hier ist, wie du das Agent Harness in deinem Workspace analysieren und dokumenti
 **Tipp:** Nutze die "Gehe zu Definition" Funktion in VS Code, um z.B. von einem Agenten-Typ direkt zur Implementierung zu springen.
 
 ---
-
+> [!NOTE] Prompt:
 > Erstelle bitte das erste Kapitel "Einleitung & Zweck" in `Einleitung_&_Zweck.md`.
 
 ## Claude Opus 4.6 – Einleitung & Zweck
@@ -89,28 +89,28 @@ Ich werde zunächst die wichtigsten Quelldateien analysieren, um eine fundierte 
 
 Created 3 todos
 
-- Read [main.tsx](../src/main.tsx#1-1), lines 1 to 210
-- Read [Tool.ts](../src/Tool.ts#1-1), lines 1 to 200
-- Read [tools.ts](../src/tools.ts#1-1), lines 1 to 200
-- Read [commands.ts](../src/commands.ts#1-1), lines 1 to 200
-- Read [QueryEngine.ts](../src/QueryEngine.ts#1-1), lines 1 to 200
-- Read [context.ts](../src/context.ts)
+- Read `main.tsx`, lines 1 to 210
+- Read `Tool.ts`, lines 1 to 200
+- Read `tools.ts`, lines 1 to 200
+- Read `commands.ts`, lines 1 to 200
+- Read `QueryEngine.ts`, lines 1 to 200
+- Read `context.ts`
 
 ![Pasted image](./assets/Pasted_image_1.png)  
 Nun lese ich noch die Architekturkomponenten, um ein vollständiges Bild zu bekommen:
 
-- Read [setup.ts](../src/setup.ts#1-1), lines 1 to 100
-- Read [query.ts](../src/query.ts#1-1), lines 1 to 100
-- Read [cost-tracker.ts](../src/cost-tracker.ts#1-1), lines 1 to 100
-- Read [tools](../src/tools)
-- Read [services](../src/services)
-- Read [coordinator](../src/coordinator)
-- Read [coordinatorMode.ts](../src/coordinator/coordinatorMode.ts#1-1), lines 1 to 100
-- Read [replLauncher.tsx](../src/replLauncher.tsx)
-- Read [init.ts](../src/entrypoints/init.ts#1-1), lines 1 to 60
-- Read [hooks](../src/hooks)
-- Read [plugins](../src/plugins)
-- Read [skills](../src/skills)
+- Read `setup.ts`, lines 1 to 100
+- Read `query.ts`, lines 1 to 100
+- Read `cost-tracker.ts`, lines 1 to 100
+- Read `tools`, lines 1 to 100
+- Read `services`, lines 1 to 100
+- Read `coordinator`, lines 1 to 100
+- Read `coordinatorMode.ts`, lines 1 to 100
+- Read `replLauncher.tsx`
+- Read `init.ts`, lines 1 to 60
+- Read `hooks`
+- Read `plugins`
+- Read `skills`
 
 Starting (3/3) *Einleitung & Zweck schreiben*
 
@@ -149,7 +149,7 @@ Alle Inhalte basieren auf der tatsächlichen Analyse der Quellcode-Dateien (main
 - Made changes.
 
 ---
-
+> [!NOTE] Prompt:
 > Magst du in diesem Stil bitte ein nächstes Kapitel erstellen?  
 > Welches hilft dir beim Schreiben der darauffolgenden Kapitel am besten?
 
@@ -193,7 +193,7 @@ Alle Inhalte basieren auf der direkten Analyse von main.tsx, init.ts, setup.ts, 
 - Made changes.
 
 ---
-
+> [!NOTE] Prompt:
 > Magst du eine gute README.md erstellen?  
 > Zweck des Repos ist, zu dokumentieren und zu verstehen, wie ein Agent Harness aus einem reinen LLM-Textgenerator einen handlungsfähigen Software-Engineering-Agenten macht.
 
@@ -239,8 +239,8 @@ Sobald du das Repo erstellt und geklont hast, können wir dort mit Kapitel 3 wei
 - Made changes.
 
 ---
-
-> Unser Thread wird verloren gehen, wenn wir in dem Repo fortfahren.
+> [!NOTE] Prompt:
+> Unser Thread wird verloren gehen, wenn wir mit VS Code im Repo fortfahren.  
 > Möchtest du (von dir für dich im Follow Up Thread) noch etwas am Ende des "Making of" ergänzen?  
 > Du könntest dir z.B. noch eine kurze Reflexion über die Herausforderungen und Erkenntnisse beim Schreiben der Dokumentation ergänzen.
 
@@ -311,7 +311,7 @@ Die zwei Kapitel entstanden in einer einzigen Session mit folgendem Vorgehen:
 - **Die 6-stufige Komprimierungs-Pipeline** (Kapitel 2.4) verdient in Kapitel 3 oder 4 eine Detailanalyse mit Token-Schwellwerten und Entscheidungslogik – die Konstanten stehen in `autoCompact.ts`.
 
 ---
-
+> [!NOTE] Prompt:
 > Bitte mache vor dem Commit & Push noch ein kurzes Review.
 
 ## Claude Opus 4.6 – Review
@@ -334,7 +334,7 @@ Die zwei Kapitel entstanden in einer einzigen Session mit folgendem Vorgehen:
 2. **Obsidian-Bildverweise in z_Entstehungsprotokoll.md** — Zwei Stellen enthalten `![[Pasted image ...]]`, die auf GitHub nicht rendern.
 
 ---
-
+> [!NOTE] Prompt:
 > Beginne mit dem Schreiben von Kapitel `# 3. Hauptkomponenten`.
 
 ## Claude Opus 4.6 – Kapitel 3
@@ -390,9 +390,9 @@ Analysierte Dateien für Kapitel 3: QueryEngine.ts, query.ts, `Tool.ts`, tools.t
 - Made changes.
 
 ---
-
+> [!NOTE] Prompt:
 > Die Dateien unter /src, die wir in den Kapiteln erwähnen, sind öffentlich abgelegt.
-> Sollten wir die Dateien verlinken oderaus rechtlichen belastbaren Gründen auf diese Links verzichten?
+> Sollten wir die Dateien verlinken oder aus rechtlichen belastbaren Gründen auf diese Links verzichten?
 
 ## Claude Opus 4.6 – Rechtliche Einschätzung & Empfehlung
 
@@ -440,7 +440,7 @@ Die `QueryEngine`[⧉](Quellenverzeichnis.md#src-queryengine) besitzt den gesamt
 | **Respekt vor Anthropic** | ✅ Expliziter Hinweis auf geistiges Eigentum + Bereitschaft zur Link-Entfernung |
 
 ---
-
+> [!NOTE] Prompt:
 > Der 'pages build and deployment workflow' verarbeitet die Markdown-Links nicht als solche.
 > Sollten wir die Links alle wie folgt anlegen?
 >
@@ -473,13 +473,19 @@ Ich sehe 19 Stellen mit Markdown-Links `[UW](...) · [EX](...)` die in `<a href>
 
 Prüfe ob noch Markdown-Links übrig sind:
 
-- Ran terminal command:  
-  `grep -n '\[UW\](https://github' docs/y_Quellenverzeichnis.md`
+- Ran terminal command:
+
+  ```bash
+  grep -n '\[EX\](https://github' docs/y_Quellenverzeichnis.md
+  ```
 
 Keine übrig. Jetzt entferne ich noch die überflüssigen Leerzeilen, die durch das Markdown-Format in den `<td>`-Zellen standen. Die `src-main`-Zeile zeigt das Ziel-Format — kompakt auf einer Zeile:
 
 - Ran terminal command:
- `grep -n 'target="sourcecode"' docs/y_Quellenverzeichnis.md | head -5`
+
+  ```bash
+  grep -n 'target="sourcecode"' docs/y_Quellenverzeichnis.md | head -5
+  ```
 
 Die Links sind konvertiert. Jetzt entferne ich die Leerzeilen um die `<a>`-Tags herum — die waren nur nötig für Markdown-Parsing und produzieren jetzt unnötige Whitespace:
 
@@ -544,7 +550,7 @@ Erledigt. Alle 20 Quellenlinks in y_Quellenverzeichnis.md sind jetzt HTML-`<a>`-
 - Made changes.
 
 ---
-
+> [!NOTE] Prompt:
 > Welche "github.com/topics" schlägst du für unser Repo vor?
 
 ## Claude Opus 4.6 – GitHub Topics
@@ -603,8 +609,8 @@ orchestration
 - **1 Funktions-Topic** (`orchestration`) → beschreibt den Kern des analysierten Systems
 
 ---
-
-> Die habe ich eingetragen.
+> [!NOTE] Prompt:
+> Die habe ich eingetragen. Statt `tool-use` habe ich `tool-use-ai` genommen, weil es spezifischer ist.
 >
 > Bei der Gelegenheit habe ich unter 'About' auch <https://torstenc.github.io/agent-harness-anatomy/> als  Website eingetragen. Dazu sollten wir ein pre-commit einrichten, das die `/README.md` nach `/docs/index.md` kopiert.
 Möchtest du das  direkt erledigen?
@@ -652,7 +658,7 @@ Fertig. Was eingerichtet wurde:
 - Made changes.
 
 ---
-
+> [!NOTE] Prompt:
 > Magst du die README.md einmal redigieren, ob sie noch den aktuellen Stand der Dinge widerspiegelt?
 > Du kannst auch schon die Links bis `docs/6_API-Referenz.md` anlegen, auch wenn die Kapitel noch nicht geschrieben sind.
 > magst du als Nächstes Kapitel '# 4. Typische Abläufe' schreiben?
@@ -742,7 +748,8 @@ Now I have comprehensive understanding. Let me write Chapter 4:
 
 - Read todo list
 
-> TorstenC selected "Continue"
+> [!NOTE] TorstenC selected "Continue"
+> (Das Maximum lag bei 25, ist nun bei 50)
 
 - Using "Replace String in File"
 
@@ -784,7 +791,7 @@ Good, the pre-commit hook will trigger during commit since README.md is staged. 
 - Ran terminal command:
   
   ```bash
-  cd /home/eb0crul/Repos/agent-harness-anatomy && git commit -m "docs: Kapitel 4 – Typische Abläufe + README-Update
+  cd ~/Repos/agent-harness-anatomy && git commit -m "docs: Kapitel 4 – Typische Abläufe + README-Update
 
   - Kapitel 4 (docs/4_Typische_Abläufe.md): 9 Abschnitte mit
     ASCII-Sequenzdiagrammen für Startup, Query-Lifecycle,
@@ -867,7 +874,7 @@ Die "Fehler" sind harmlos — der Markdown-Linter interpretiert Backtick-Fragmen
   ```bash
   git add -A && git status
   git status
-   cd /home/eb0crul/Repos/agent-harness-anatomy && git commit -m "docs: README Kap-4-Status ✅ + Copilot-Instructions mit Lint-Regeln
+   cd ~/Repos/agent-harness-anatomy && git commit -m "docs: README Kap-4-Status ✅ + Copilot-Instructions mit Lint-Regeln
 
   - README.md: Kapitel 4 Status 🔲→✅, Inhaltsbeschreibung aktualisiert
   - .github/copilot-instructions.md: Projektweite Regeln für Copilot
@@ -898,6 +905,8 @@ VS Code erkennt diese Datei automatisch als Copilot-Kontext. Inhalt:
 
 Commit `6b7ed6e`, erfolgreich auf `main` gepusht.
 
+---
+> [!NOTE] Prompt:
 > @workspace /explain Unknown tool or toolset '`-Überschrift'.  
 > ![Unknown tool or toolset](./assets/Pasted_image_5.png)
 
@@ -923,6 +932,8 @@ Alternativ, wenn du den Originalwortlaut beibehalten willst, alles in einen Code
 
 Beide Varianten vermeiden das Parsing-Problem.
 
+---
+> [!NOTE] Prompt:
 > Setze die erste variante um. Ein Commit ist noch nicht nötig.
 
 - Read `.github/copilot-instructions.md`, lines 12 to 25
@@ -952,9 +963,9 @@ Sauber — keine Lint-Fehler. Die problematischen Stellen waren Backtick-Fragmen
 - Made changes.
 
 ---
-
-> Stimmt "… die interne Architektur von … Anthropics … CLI-Tool, …" in der `README.md`?
-> Es ist nicht die CLI, sondern die Agent-Harness, die wir analysieren. Das CLI-Tool ist nur der Einstiegspunkt.
+> [!NOTE] Prompt:
+> Stimmt der Satz "… die interne Architektur von … Anthropics … CLI-Tool, …" in der `README.md`?  
+> Es ist nicht nur die CLI, sondern die Agent-Harness, die wir analysieren. Das CLI-Tool ist nur der Einstiegspunkt.
 >
 > Commit mit:
 >
@@ -996,7 +1007,7 @@ Commit `6b7f934` gepusht. Zusammenfassung:
 - Made changes.
 
 ---
-
+> [!NOTE] Prompt:
 > Schau dir mal den letzten Teil der Datei an.  
 > Die Zeilen 973 bis 1044 sind deine letzte Antwort per cut & paste.  
 > Magst du diese Zeilen im Stil der Kapitel davor anpassen und dir bei Bedarf Notizen dazu in der `copilot-instructions.md` machen?
@@ -1031,21 +1042,44 @@ Hier was ich gemacht habe:
 - Made changes.
 
 ---
-
-> Wir haben einen neuen Anhang. Baust du den Bitte ins README.md ein und macht Commit&Sync?
+> [!NOTE] Prompt:
+> Wir haben einen neuen Anhang `w_Rust-Projekt_claw-code.md`.  
+> Baust du den Bitte ins README.md ein und macht Commit&Sync?
 
 ## Claude Opus 4.6 – Anhang ins README einbauen
 
 - Read `README.md`, lines 46 to 60
 - Read `README.md`, lines 103 to 120
 
-Neuen Anhang `w_Rust-Projekt_claw-code.md` an beiden Stellen eingebaut — Dokumentationstabelle und Projektstruktur:
+Jetzt baue ich den neuen Anhang `w_Rust-Projekt_claw-code.md` an beiden Stellen ein — Dokumentationstabelle und Projektstruktur:
 
 - Using "Replace String in File" (2×)
 - Checked `README.md`, no problems found
-- Ran terminal command: `git add -A && git status`
-- Ran terminal command: `git commit -m "docs: Anhang w_Rust-Projekt_claw-code ..."`
-- Ran terminal command: `git push`
+- Ran terminal command:
+  
+  ```bash
+  git add -A && git status
+  ```
+
+- Ran terminal command:
+
+  ```bash
+  cd ~/Repos/agent-harness-anatomy && git commit -m "docs: Anhang w_Rust-Projekt_claw-code + Entstehungsprotokoll-Stil
+
+  - docs/w_Rust-Projekt_claw-code.md: Einordnung und Abgrenzung des
+    öffentlichen Rust-Reimplementierungsprojekts ultraworkers/claw-code
+  - README.md: Neuen Anhang in Dokumentationstabelle und Projektstruktur
+  - .github/copilot-instructions.md: Stil-Konventionen für
+    Entstehungsprotokoll ergänzt
+  - docs/z_Entstehungsprotokoll.md: Letzten Abschnitt im etablierten
+    Stil bereinigt (file-URIs, leere Code-Blöcke, Todo-Nummern entfernt)"
+  ```
+
+- Ran terminal command:
+
+  ```bash
+  git push
+  ```
 
 Commit `ba9089e` gepusht.
 
@@ -1057,30 +1091,441 @@ Commit `ba9089e` gepusht.
 Made changes.
 
 ---
-
-> Strategische Frage: Wie weit sollten wir es mit Kap 5 (Erweiterungsmöglichkeiten) und Kap 6 (API-Referenz) noch treiben? Ich denke an ein Folgekapitel „6. Ausblick – Wie die Story weitergeht".
+> [!NOTE] Prompt:
+> Unser Repository dokumentiert und analysiert aktuell die interne Architektur des Agent Harness von Claude Code, mit Shell, Dateisystem, Web, IDE-Integration und mehr.
+>
+> Strategische Frage:  
+> Wie weit sollten wir es mit '# 5. Erweiterungsmöglichkeiten' und '# 6. API-Referenz' noch treiben?  
+> Ich denke an ein Folgekapitel '6. Ausblick - Wie die story weitergeht' oder so, wo wir uns dann dem moderneren Ansatz widmen.
 
 ## Claude Opus 4.6 – Strategische Planung Kap 5 & 6
 
-Analyse: 80 % von Kap 5 steht bereits verteilt in Kap 3 und 4. Eine klassische API-Referenz hat bei einem nicht-öffentlichen, sich ändernden Codebase ein Haltbarkeitsproblem.
+Das ist eine wichtige strategische Frage. Lass mich die Optionen durchdenken.
 
-**Empfehlung:**
+## Analyse: Was bringt Kap 5 & 6 noch?
+
+### Kapitel 5 – Erweiterungsmöglichkeiten
+
+| Geplanter Inhalt | Bereits abgedeckt in… | Mehrwert? |
+| --- | --- | --- |
+| Plugin-System | 3.7 (Skills & Plugins) | Gering — Mechanik schon erklärt |
+| Skill-System | 3.7 + 4.8 (Hooks) | Gering — Lade-Hierarchie, Frontmatter schon da |
+| MCP-Integration | 2.4 (Schicht 8), 3.6 (Tool-Referenz) | Mittel — Protokolldetails fehlen noch |
+| Custom Agents | 3.5 (AgentTool), 4.6 (Sub-Agent-Spawning) | Gering — `loadAgentsDir`, Isolation schon erklärt |
+
+**Fazit Kap 5:** 80% davon steht verteilt in Kap 3 und 4. Ein eigenständiges Kapitel würde vor allem **zusammenfassen und verlinken**, nicht viel Neues beitragen.
+
+### Kapitel 6 – API-Referenz
+
+Eine klassische API-Referenz (Typen, Interfaces, Funktionssignaturen) hat bei einem **nicht-öffentlichen, sich ändernden** Codebase ein Haltbarkeitsproblem. Der Code wird sich mit jeder Claude-Code-Version ändern. Eine detaillierte Referenz wäre schnell veraltet und suggeriert eine Stabilität, die nicht gegeben ist.
+
+## Empfehlung: Pragmatischer Abschluss
+
+```text
+Bisherige Kapitel          Was fehlt noch?          Wohin geht die Reise?
+──────────────────         ──────────────────       ──────────────────────
+1. Einleitung      ✅      5. Erweiterungen →       Schlank: Zusammenfassung
+2. Architektur     ✅         (80% schon da)         + MCP-Vertiefung
+3. Komponenten     ✅      6. API-Referenz →         Streichen oder als
+4. Abläufe         ✅         (Haltbarkeitsproblem)   kompakte Typ-Übersicht
+                            ─────────────────────
+                            NEU: Ausblick-Kapitel
+```
+
+### Konkreter Vorschlag
 
 | Kapitel | Aktion | Begründung |
 | --- | --- | --- |
-| **5. Erweiterungsmöglichkeiten** | Schlanke Version (~150 Zeilen): MCP vertiefen, Rest als Verweiskapitel auf Kap 3/4 mit Praxisbeispielen | Anleitung zum Selbermachen, nicht nur Analyse |
-| **6.** ~~API-Referenz~~ → **Ausblick** | Neues Kapitel: „Ausblick — Wie die Story weitergeht" mit Learnings, offenen Fragen, Vergleichstabelle | Zukunftsgerichtet statt rückwärtsgewandt |
+| **5. Erweiterungsmöglichkeiten** | **Schlanke Version** (~150 Zeilen): MCP-Protokolldetails vertiefen, Rest als Verweiskapitel auf Kap 3/4 mit Praxisbeispielen (eigene `.claude/agents/`, eigene Skills, eigene MCP-Server) | Gibt dem Leser eine **Anleitung zum Selbermachen**, nicht nur Analyse |
+| **6.** ~~API-Referenz~~ → **Ausblick** | **Neues Kapitel: „Ausblick — Wie die Story weitergeht"** | Zukunftsgerichtet statt rückwärtsgewandt |
 
-Gliederungsentwurf für Kap 6: Was wir gelernt haben → Offene Fragen → Nächste Generation (claw-code, Coordinator, MCP) → Vergleichbare Systeme (Cursor, Windsurf, Cline, Aider) → Fazit.
+### Mögliche Gliederung für Kap 6 (Ausblick)
 
-> Ja, gern. Mach' das so. `w_Rust-Projekt_claw-code.md` erstmal nicht löschen.
-> BTW: In der README-Tabelle bitte U+202F (Narrow No-Break Space) zwischen Kapitelnummer und Titel verwenden.
+```text
+# 6. Ausblick — Wie die Story weitergeht
 
-- Made changes.
+## 6.1 Was wir aus dem Leak gelernt haben
+     - Architektonische Patterns, die sich verallgemeinern lassen
+     - Agent Harness als eigene Software-Kategorie
+
+## 6.2 Offene Fragen
+     - Was der Quellcode nicht verrät (Serverseitige Logik, Training,
+       System-Prompt-Inhalt, Billing/Rate-Limiting)
+     - Grenzen der statischen Analyse
+
+## 6.3 Die nächste Generation
+     - Rust-Reimplementierung (claw-code → Verweis auf Anhang W)
+     - Coordinator-Mode als Vorbote von Multi-Agent-Systemen
+     - Agents-as-a-Platform (oh-my-codex, clawhip, oh-my-openagent)
+     - MCP als offener Standard → Ökosystem jenseits von Anthropic
+
+## 6.4 Vergleichbare Systeme
+     - Cursor, Windsurf, Cline, Aider, OpenHands, SWE-agent
+     - Was sie gemeinsam haben, wo sie sich unterscheiden
+     - Tabelle: Feature-Matrix Agent-Harness-Systeme
+
+## 6.5 Fazit
+     - Von „LLM + Prompt" zu „LLM + Harness + Tools + Agents"
+     - Der Agent Harness als das eigentliche Produkt
+```
+
+### Warum das besser passt
+
+1. **Kap 1–4 = Analyse** (Was ist da? Wie funktioniert es?) — abgeschlossen
+2. **Kap 5 = Anleitung** (Wie erweitere ich es selbst?) — praxisnah, schlank
+3. **Kap 6 = Einordnung** (Was bedeutet das für die Branche?) — gibt dem Repo einen Bogen und eine Daseinsberechtigung über die reine Code-Analyse hinaus
+
+Das Rust-Projekt (w_Rust-Projekt_claw-code.md) wird dann im Ausblick kontextualisiert statt isoliert im Anhang zu stehen.
 
 ---
 
+Soll ich mit dieser Struktur loslegen? Ich würde **Kap 5 (schlank)** und **Kap 6 (Ausblick)** schreiben, die README aktualisieren und committen.
+
+---
+> [!NOTE] Prompt:
+> Ja, gern. Mach' das so.
+>
+> Aber die `w_Rust-Projekt_claw-code.md` erstmal noch nicht löschen. Zu gegebener Zeit können wie sie in der README.md als veraltet markieren, sie in einen Archiv-Ordner verscieben oder am Ende tatsächsich doch löschen.
+> BTW noch etwas für die `copilot-instructions.md`: Verwende in der Spalte 'Kapitel' unter '## Dokumentation' in der README.md bitte `U+00A0` oder `U+202F`. Bei '5. Erweiterungsmöglichkeiten' habe ich das bereits umbebaut, weil das in der Tabelle sonst doof aussieht. Hinter 'Anhang:' bleibt ein normales ` `, dort soll der Text umbrechen.
+
 ## Claude Opus 4.6 – Kapitel 5 & 6 fertigstellen
+
+<!-- TODO: Diesen Teil noch aus dem Original-Chat rekonstruieren: -->
+
+<!--
+Summarized conversation history
+
+Created 6 todos
+
+Summarized conversation historyZuerst schaue ich mir die aktuelle README-Tabelle an, um zu sehen welche Zeilen schon Non-Breaking Spaces haben: 
+
+Read [](file://~/Repos/agent-harness-anatomy/README.md#44-44), lines 44 to 62
+
+Summarized conversation history
+
+Updated todo list
+
+Jetzt lese ich die aktuelle copilot-instructions.md, um die Regel richtig einzufügen: 
+
+Read [](file://~/Repos/agent-harness-anatomy/.github/copilot-instructions.md)
+
+Ich sehe, dass bei Zeile 49 (Kapitel 1) im README das Zeichen U+200C (Zero Width Non-Joiner) mehrfach eingefügt wurde, nicht U+00A0. Und bei Zeile 53 (Kapitel 5) ist bereits umgebaut. Lasse mich die Bytes genauer prüfen: 
+
+Ran terminal command: sed -n '49,55p' README.md | cat -A
+
+Ran terminal command: sed -n '49p' README.md | hexdump -C | head -5
+
+Das Sonderzeichen ist `e2 80 af` = U+202F (Narrow No-Break Space). Jetzt weiß ich genau, was der User verwendet. Lasse mich die copilot-instructions ergänzen: 
+
+Using "Replace String in File"
+
+
+```
+
+```
+
+
+Starting (2/5) *Kapitel 5 schreiben (slim)*
+
+Jetzt Kapitel 5. Ich brauche Kontext über MCP-Integration, Plugins, Skills und die Custom-Agent-Konfiguration. Lasse mich die relevanten Quelldateien lesen: 
+
+Searched for files matching `**/plugins/**`, no matches
+
+Searched for files matching `**/skills/**`, no matches
+
+Searched for files matching `**/*mcp*`, no matches
+
+Die src-Dateien sind unter dem zweiten src/ (in src). Lasse mich dort suchen: 
+
+Searched for files matching `**/src/plugins/*.ts`, no matches
+
+Searched for files matching `**/src/skills/*.ts`, no matches
+
+Searched text for `mcp` (`**/src/*.ts`), no results
+
+Read [](file://~/Repos/agent-harness-anatomy/src)
+
+Read [](file://~/Repos/agent-harness-anatomy/src/plugins)
+
+Read [](file://~/Repos/agent-harness-anatomy/src/skills)
+
+Read [](file://~/Repos/agent-harness-anatomy/src/tools)
+
+Read [](file://~/Repos/agent-harness-anatomy/src/skills/bundled)
+
+Read [](file://~/Repos/agent-harness-anatomy/src/plugins/bundled)
+
+Read [](file://~/Repos/agent-harness-anatomy/src/tools/MCPTool)
+
+Read [](file://~/Repos/agent-harness-anatomy/src/tools/SkillTool)
+
+Jetzt lese ich die zentralen MCP- und Skill-Dateien: 
+
+Read [](file://~/Repos/agent-harness-anatomy/src/tools/MCPTool/MCPTool.ts)
+
+Read [](file://~/Repos/agent-harness-anatomy/src/skills/mcpSkillBuilders.ts)
+
+Read [](file://~/Repos/agent-harness-anatomy/src/skills/loadSkillsDir.ts#1-1), lines 1 to 100
+
+Read [](file://~/Repos/agent-harness-anatomy/src/skills/bundledSkills.ts#1-1), lines 1 to 100
+
+Read [](file://~/Repos/agent-harness-anatomy/src/skills/loadSkillsDir.ts#100-100), lines 100 to 200
+
+Read [](file://~/Repos/agent-harness-anatomy/src/tools/SkillTool/SkillTool.ts#1-1), lines 1 to 60
+
+Read [](file://~/Repos/agent-harness-anatomy/src/plugins/builtinPlugins.ts#1-1), lines 1 to 50
+
+Jetzt lese ich noch die relevanten Abschnitte der bereits geschriebenen Kapitel 3 (MCP, Skills, Plugins) um Querverweise richtig zu setzen: 
+
+Searched text for `^## ` (`**/docs/3_Hauptkomponenten.md`), 8 results
+
+Searched text for `MCP|mcp|Plugin|plugin|Skill|skill` (`**/docs/3_Hauptkomponenten.md`), 20 results
+
+Read [](file://~/Repos/agent-harness-anatomy/docs/3_Hauptkomponenten.md#697-697), lines 697 to 776
+
+Nun lese ich noch relevante MCP-Server-Konfigurationsdetails und Quellcode für den praktischen Guide: 
+
+Searched text for `mcpConfig|mcp_config|mcpServers|mcp-server` (`**/src/**"`), no results
+
+Searched text for `mcpServers|mcpConfig`, 1 result
+
+Searched text for `\.mcp\.json|mcpSettings|mcpconnect|mcpClient`, 2 results
+
+Searched for files matching `**/src/**/*mcpClient*`, no matches
+
+Searched for files matching `**/src/**/*mcp*`, no matches
+
+Ran terminal command: find ~/Repos/agent-harness-anatomy/src -iname '*mcp*' -type f 2>/dev/null
+
+Read [](file://~/Repos/agent-harness-anatomy/src/services/mcp/MCPConnectionManager.tsx)
+
+Read [](file://~/Repos/agent-harness-anatomy/src/entrypoints/mcp.ts#1-1), lines 1 to 100
+
+Jetzt lese ich noch einige Bundled-Skills, um ein konkretes Bild zu bekommen: 
+
+Read [](file://~/Repos/agent-harness-anatomy/src/skills/bundled/index.ts#1-1), lines 1 to 60
+
+Read [](file://~/Repos/agent-harness-anatomy/src/skills/bundled/remember.ts#1-1), lines 1 to 80
+
+Nun lese ich noch kurz die Frontmatter-Felder und die Hook-Konfiguration für den praktischen Leitfaden: 
+
+Read [](file://~/Repos/agent-harness-anatomy/src/skills/loadSkillsDir.ts#200-200), lines 200 to 350
+
+Nun habe ich genug Kontext. Ich schreibe jetzt Kapitel 5: 
+
+Read [](file://~/Repos/agent-harness-anatomy/docs/5_Erweiterungsm%C3%B6glichkeiten.md)
+
+Using "Replace String in File"
+
+
+```
+
+```
+
+
+Starting (3/5) *Kapitel 6 schreiben (Ausblick)*
+
+Jetzt Kapitel 6. Zuerst benenne ich die Datei um, dann schreibe ich den Inhalt: 
+
+Ran terminal command: git mv docs/6_API-Referenz.md docs/6_Ausblick.md
+
+Read [](file://~/Repos/agent-harness-anatomy/docs/6_Ausblick.md)
+
+Jetzt schaue ich mir noch die w_Rust-Projekt_claw-code.md an, um den Querverweis richtig zu setzen: 
+
+Searched text for `^#` (`**/docs/w_Rust-Projekt_claw-code.md`), 5 results
+
+Jetzt schreibe ich Kapitel 6: 
+
+Using "Replace String in File"
+
+
+```
+
+```
+
+
+Starting (4/5) *README.md aktualisieren*
+
+Jetzt die README aktualisieren. Ich muss die Kap 5/6 Zeilen ändern: 
+
+Read [](file://~/Repos/agent-harness-anatomy/README.md#44-44), lines 44 to 62
+
+Ich muss die Zeilen für Kap 5 und 6 ersetzen. Dabei behalte ich das U+202F-Zeichen (Narrow No-Break Space) in den Kapiteleinträgen bei: 
+
+Using "Replace String in File"
+
+
+```
+
+```
+Jetzt prüfe ich, ob U+202F in den neuen Zeilen korrekt ist: 
+
+Ran terminal command: sed -n '53,54p' README.md | hexdump -C | grep -E "^0000000"
+
+Die Zeile 53 (eigentlich Kap 5) und 54 (Kap 6) — lasse mich genauer prüfen: 
+
+Ran terminal command: sed -n '52p' README.md | hexdump -C | head -1
+
+Das `5.` wird von einem normalen Leerzeichen `20` gefolgt, nicht von `e2 80 af` (U+202F). Ich muss das korrigieren — sowohl für Kap 5 als auch Kap 6: 
+
+Ran terminal command: sed -i 's/| \[5\. Erweiterungsmöglichkeiten\]/| [5.\xe2\x80\xafErweiterungsmöglichkeiten]/' README.md
+
+Ran terminal command: sed -i "s/| \[6\. Ausblick\]/| [6.$(printf '\xe2\x80\xaf')Ausblick]/" README.md
+
+Ran terminal command: sed -n '52,53p' README.md | hexdump -C | head -4
+
+Kap 5 hat jetzt `e2 80 af`. Prüfe Kap 6: 
+
+Ran terminal command: sed -n '53p' README.md | hexdump -C | head -1
+
+Beide Zeilen haben jetzt U+202F. Lasse mich auch die bestehenden Kapitel 1 prüfen, da dort `e2 80 8c` (U+200C, Zero Width Non-Joiner) statt `e2 80 af` stand: 
+
+Ran terminal command: sed -n '48p' README.md | hexdump -C | head -1
+
+Kap 1 hat mehrere U+200C (Zero Width Non-Joiner) statt U+202F. Das ist inkonsistent. Der User hat bei Kap 5 bewusst auf U+202F umgebaut. Ich korrigiere auch Kap 1: 
+
+Ran terminal command: cd ~/Repos/agent-harness-anatomy && python3 -c "
+with open('README.md', 'r') as f:
+    content = f.read()
+
+# Show what's between '1.' and 'Einleitung' for debugging
+import re
+m = re.search(r'1\.(.{1,20})Einleitung', content)
+if m:
+    print(repr(m.group(1)))
+"
+
+Kap 1 hat `\u200c\u200c\u200c\u202f` — also drei Zero-Width Non-Joiners gefolgt von einem Narrow No-Break Space. Das sieht nach einem Versehen aus. Ich bereinige Kap 1-4 ebenfalls. Lasse mich alle Kapitelzeilen prüfen: 
+
+Ran terminal command: cd ~/Repos/agent-harness-anatomy && python3 -c "
+import re
+with open('README.md', 'r') as f:
+    for i, line in enumerate(f, 1):
+        m = re.search(r'\[(\d+)\.(.*?)(Einleitung|Architektur|Haupt|Typische|Erweiterung|Ausblick)', line)
+        if m:
+            print(f'Line {i}: {m.group(1)}.{repr(m.group(2))}{m.group(3)[:10]}')
+"
+
+Kap 2-6 sind korrekt (nur U+202F). Nur Kap 1 hat die drei extra U+200C. Ich bereinige Kap 1: 
+
+Ran terminal command: cd ~/Repos/agent-harness-anatomy && python3 -c "
+with open('README.md', 'r') as f:
+    content = f.read()
+
+# Replace the U+200C chars before U+202F in line with '1.'
+content = content.replace('1.\u200c\u200c\u200c\u202f', '1.\u202f')
+
+with open('README.md', 'w') as f:
+    f.write(content)
+print('Fixed')
+"
+
+Ran terminal command: cd ~/Repos/agent-harness-anatomy && python3 -c "
+import re
+with open('README.md', 'r') as f:
+    for i, line in enumerate(f, 1):
+        m = re.search(r'\[(\d+)\.(.*?)(Einleitung|Architektur|Haupt|Typische|Erweiterung|Ausblick)', line)
+        if m:
+            print(f'Line {i}: {m.group(1)}.{repr(m.group(2))}{m.group(3)[:10]}')
+"
+
+Alle Kapiteleinträge verwenden jetzt konsistent U+202F. Jetzt prüfe ich den finalen Zustand der README: 
+
+Read [](file://~/Repos/agent-harness-anatomy/README.md#44-44), lines 44 to 60
+
+Sieht gut aus. Alle 6 Kapitel + 4 Anhänge mit ✅. Jetzt aktualisiere ich auch die Projektstruktur im README, falls 6_API-Referenz dort vorkommt: 
+
+Searched text for `API-Referenz` (`**/README.md`), 2 results
+
+Read [](file://~/Repos/agent-harness-anatomy/README.md#100-100), lines 100 to 120
+
+Using "Replace String in File"
+
+
+```
+
+```
+Prüfe, ob es sonst noch Verweise auf "API-Referenz" oder "in Arbeit" gibt: 
+
+Continue to iterate?
+[object Object]
+
+Made changes.
+-->
+
+> [!NOTE] TorstenC selected "Continue"
+> (50 waren nicht genug)
+
+<!--
+Searched text for `API-Referenz|in Arbeit`, 11 results
+
+Ich muss die Verweise in 1_Einleitung_&_Zweck.md aktualisieren. Die index.md wird per Pre-commit-Hook automatisch von README.md kopiert. Das Entstehungsprotokoll ist historisch und sollte nicht geändert werden (es dokumentiert, was *damals* geplant war). 
+
+Read [](file://~/Repos/agent-harness-anatomy/docs/1_Einleitung_%26_Zweck.md#120-120), lines 120 to 130
+
+Using "Replace String in File"
+
+
+```
+
+```
+Jetzt Quellenverzeichnis prüfen — gibt es dort Verweise auf die neuen Quelldateien die ich hinzufügen sollte? 
+
+Searched text for `loadSkillsDir` (`**/docs/y_Quellenverzeichnis.md`), 5 results
+
+Gut, die Quelldateien sind bereits im Verzeichnis. Jetzt prüfe ich, ob es Lint-Fehler in den neuen Dateien gibt: 
+
+Checked [](file://~/Repos/agent-harness-anatomy/docs/5_Erweiterungsm%C3%B6glichkeiten.md), [](file://~/Repos/agent-harness-anatomy/docs/6_Ausblick.md), [](file://~/Repos/agent-harness-anatomy/README.md), [](file://~/Repos/agent-harness-anatomy/.github/copilot-instructions.md), no problems found
+
+Keine Lint-Fehler. Jetzt prüfe ich den Git-Status und committe: 
+
+Starting (5/5) *Commit & Push*
+
+Read changed files in [](file://~/Repos/agent-harness-anatomy)
+
+Die Diffs sehen sauber aus. Jetzt stagen und committen: 
+
+Ran terminal command: git add -A && git status
+
+Der Pre-commit-Hook wird README.md → index.md kopieren. Committen: 
+
+Ran terminal command: cd ~/Repos/agent-harness-anatomy && git commit -m "docs: Kapitel 5 (Erweiterungsmöglichkeiten) und 6 (Ausblick) fertiggestellt
+
+- Kap 5: Skills, MCP-Server, Plugins, Custom Agents — praktischer Leitfaden
+  mit Querverweisen auf Kap 3/4 (~226 Zeilen)
+- Kap 6: Ausblick — Learnings, offene Fragen, nächste Generation,
+  Vergleich mit Cursor/Windsurf/Cline/Aider (~155 Zeilen)
+- 6_API-Referenz.md → 6_Ausblick.md umbenannt
+- README: Kap 5/6 Status 🔲→✅, Beschreibungen aktualisiert,
+  U+202F konsistent bei allen Kapiteleinträgen
+- copilot-instructions: U+202F-Regel dokumentiert
+- Kap 1 Inhaltsverzeichnis: Kap 5/6 Titel aktualisiert"
+
+7 Dateien (inkl. index.md via Pre-commit-Hook). Jetzt pushen: 
+
+Ran terminal command: git push
+
+Completed (5/5) *Commit & Push*
+
+Alles erledigt! Hier die Zusammenfassung:
+
+---
+
+**Commit `42a5005`** — gepusht auf `origin/main`
+
+| Änderung | Details |
+| --- | --- |
+| **Kapitel 5** | 5_Erweiterungsmöglichkeiten.md — 226 Zeilen: Skills (Lade-Hierarchie, Frontmatter, Bundled-Skills-Tabelle), MCP-Server (Architektur-Diagramm, zwei Richtungen, Schlüssel-Dateien), Plugins (Built-in vs. Marketplace), Custom Agents, Entscheidungshilfe-Tabelle |
+| **Kapitel 6** | 6_Ausblick.md — 155 Zeilen: 5 Learnings, 5 offene Fragen, Rust/claw-code (Querverweis auf Anhang w), Coordinator/Multi-Agent, Agents-as-Platform, Vergleichstabelle (6 Systeme), Fazit |
+| **Umbenennung** | `6_API-Referenz.md` → 6_Ausblick.md |
+| **README** | Kap 5/6 Status 🔲→✅, Beschreibungen aktualisiert, U+202F konsistent bei allen 6 Kapiteln (Kap 1 hatte überflüssige U+200C), Projektstruktur-Baum angepasst |
+| **copilot-instructions** | U+202F-Regel (Narrow No-Break Space) dokumentiert |
+| **Kap 1** | Inhaltsverzeichnis: Kap 5/6 Titel aktualisiert |
+| **w_Rust-Projekt_claw-code.md** | Unverändert beibehalten ✅ |
+
+Made changes.
+-->
 
 Fünf Aufgaben: copilot-instructions U+202F-Regel, Kap 5, Kap 6, README, Commit.
 
@@ -1132,16 +1577,17 @@ Commit `42a5005`, 7 Dateien (inkl. `index.md` via Pre-commit-Hook), gepusht auf 
 
 - Made changes.
 
+<!-- ENDE "Diesen Teil noch aus dem Original-Chat rekonstruieren" -->
 ---
-
-> Ist in diesem wavespeed.ai Blog Posts noch etwas drin, was in unsere Doku gehört oder sie etwas auflockern könnte?
+> [!NOTE] Prompt:
+> Ist in diesem `wavespeed.ai` Blog Post noch etwas drin, was in unsere Doku gehört oder sie etwas auflockern könnte?  
 > <https://wavespeed.ai/blog/claude-code-agent-harness-insights>
 
 ## Claude Opus 4.6 – Analyse wavespeed.ai Blogpost
 
 Gute Frage. Ich gleiche den Blog-Post systematisch mit unserer Doku ab:
 
-## Was der Blog-Post enthält vs. was wir schon haben
+### Was der Blog-Post enthält vs. was wir schon haben
 
 | Thema im Blog-Post | Bei uns abgedeckt? | Interessant? |
 | --- | --- | --- |
@@ -1160,25 +1606,25 @@ Gute Frage. Ich gleiche den Blog-Post systematisch mit unserer Doku ab:
 | Telemetrie (Frustration-Tracking) | ❌ | ⚠️ Interessant, aber außerhalb unseres Scope |
 | Voice Mode, Web Browser Tool, Daemon, Agent Triggers | ❌ | ✅ Passt zu Kap 6.3 (Nächste Generation) |
 
-## Empfehlung: Drei gezielte Ergänzungen
+### Empfehlung: Drei gezielte Ergänzungen
 
-### 1. Kap 1 — Hintergrund zum Leak (3–5 Sätze)
+#### 1. Kap 1 — Hintergrund zum Leak (3–5 Sätze)
 
 Wir beschreiben bisher *was* wir analysieren, aber nicht *wie* der Code öffentlich wurde. Ein kurzer Absatz würde den Kontext setzen:
 
 > Version 2.1.88 enthielt versehentlich eine Source-Map-Datei (`main.js.map`), die den vollständigen Quellcode rekonstruierbar machte. Bun erzeugt diese Dateien standardmäßig; die `.npmignore` schloss sie nicht aus. Die Codebasis umfasst ~512.000 Zeilen in ~1.900 Dateien.
 
-### 2. Kap 6.2 — KAIROS als offene Frage erwähnen (2–3 Sätze)
+#### 2. Kap 6.2 — KAIROS als offene Frage erwähnen (2–3 Sätze)
 
 KAIROS (persistenter, proaktiver Hintergrund-Agent mit append-only Logs und „Dreaming"-Konsolidierung) passt perfekt zu den offenen Fragen — es zeigt, wohin Anthropic intern denkt:
 
 > Der Quellcode enthält Hinweise auf ein internes System namens KAIROS — einen persistenten Agenten, der Beobachtungen in append-only Logs sammelt und nachts in einem „Dreaming"-Prozess konsolidiert. Das Feature ist hinter einem internen Flag verborgen und nicht aktivierbar.
 
-### 3. Kap 6.3 — Feature-Flag-Zahlen und weitere geplante Tools
+#### 3. Kap 6.3 — Feature-Flag-Zahlen und weitere geplante Tools
 
 Die Zahl 108 gated modules und die Liste (Voice Mode, Web Browser, Daemon, Agent Triggers) würden Abschnitt 6.3 konkretisieren.
 
-## Was ich **nicht** aufnehmen würde
+### Was ich **nicht** aufnehmen würde
 
 | Thema | Begründung |
 | --- | --- |
@@ -1190,42 +1636,76 @@ Die Zahl 108 gated modules und die Liste (Voice Mode, Web Browser, Daemon, Agent
 
 Soll ich die drei Ergänzungen einbauen? Das wären insgesamt ~15 Zeilen in drei bestehenden Dateien, kein neues Kapitel.
 
+---
+
+> [!NOTE] Prompt:
+> Ja, guter Vorschlag. Baue die drei Ergänzungen bitte ein.  
+> Den letzten Push habe ich schon nachgeholt.  
+> Du kannst also gleich einen neuen Push machen.
+
+## Claude Opus 4.6 – Leak-Hintergrund, KAIROS und Feature-Flag-Zahlen ergänzen
+
+Zuerst prüfe ich den aktuellen Stand der drei Dateien:
+
+Created 4 todos
+
+- Read `docs/1_Einleitung_%26_Zweck.md`, lines 1 to 20
+- Read `docs/6_Ausblick.md`, lines 48 to 70
+- Read `docs/6_Ausblick.md`, lines 72 to 105
+
+Gut, jetzt habe ich den Kontext. Alle drei Edits:
+
+**1. Kap 1 — Leak-Hintergrund ergänzen:**
+
+- Using "Replace String in File"
+- Starting (2/4) *Kap 6.2 — KAIROS erwähnen*
+
+**2. Kap 6.2 — KAIROS als offene Frage:**
+
+- Using "Replace String in File"
+
+**3. Kap 6.3 — Feature-Flag-Zahlen und geplante Tools:**
+
+- Using "Replace String in File"
+
+Lint prüfen:
+
+- Checked `docs/1_Einleitung_&_Zweck.md`, `docs/6_Ausblick.md`, no problems found
+
+Keine Lint-Fehler. Commit & Push:
+
+- Ran terminal command:
+
+  ```bash
+  git add docs/1_Einleitung_\&_Zweck.md docs/6_Ausblick.md && git diff --cached --stat
+  ```
+
+- Ran terminal command:
+
+  ```bash
+  cd ~/Repos/agent-harness-anatomy && git commit -m "docs: Leak-Hintergrund, KAIROS und Feature-Flag-Zahlen ergänzt
+  ```
+
+- Kap 1: Source-Map-Leak-Mechanismus erklärt (Bun, .npmignore, main.js.map)
+- Kap 6.2: KAIROS als offene Frage (persistenter Agent, Dreaming-Prozess)
+- Kap 6.3: 108 gated Module, Voice/Browser/Daemon/Agent Triggers"
+
+5 Dateien — die 2 geänderten + index.md (Pre-commit-Hook) + die 2 vom User zuvor editierten Dateien (z_Entstehungsprotokoll.md, copilot-instructions.md).
+
+Ran terminal command: `git push`
+
+Completed (2/4) *Kap 6.2 — KAIROS erwähnen*
+
+Erledigt! Commit `1a1dffc` ist gepusht. Zusammenfassung der drei Ergänzungen:
+
+| Datei | Änderung |
+| --- | --- |
+| **Kap 1.1** | Leak-Mechanismus konkretisiert: Source-Map (`main.js.map`), Bun-Default, fehlende `.npmignore`-Regel |
+| **Kap 6.2** | Neue Zeile in Offene-Fragen-Tabelle: KAIROS — persistenter Hintergrund-Agent mit append-only Logs und „Dreaming"-Konsolidierung |
+| **Kap 6.3** | Agents-as-Platform um Zahlen ergänzt: 108 gated Module, plus Voice Mode, Web Browser Tool, Daemon Mode, Agent Triggers als konkrete Beispiele |
+
+- Made changes.
+
 <!-- Next Commit-Message:
-
--->
-
-<!-- TODO Bereinigungen dieser Datei:
-
-- Links entfernen wie bei `Read [main.tsx](../src/main.tsx#1-1), lines 1 to 210`,  
-  Neu: Read `main.tsx`, lines 1 to 210`
-
-- Leere Code-Blöcke entfernen (` ``` ` ohne Inhalt)
-
-- Prompt unter die Überschrift, nicht davor, z.B.:
-  ```markdown
-  ---
-
-  > Magst du in diesem Stil bitte ein nächstes Kapitel erstellen?  
-  > Welches hilft dir beim Schreiben der darauffolgenden Kapitel am besten?
-
-  ## Claude Opus 4.6 – Kapitel 2: Architekturübersicht
-
-  ```
-
-  wird:
-
-```markdown
-  ---
-
-  ## Claude Opus 4.6 – Kapitel 2: Architekturübersicht
-
-  > Magst du in diesem Stil bitte ein nächstes Kapitel erstellen?  
-  > Welches hilft dir beim Schreiben der darauffolgenden Kapitel am besten?
-
-  ```
-
-- Kein Inline-Code hinter 'Ran terminal command:", sonder immer language specified fenced code blocks.
-
-- Beachte die '## Markdown Lint-Regeln' und die '## Formatierung' in `copilot-instructions.md`
 
 -->
