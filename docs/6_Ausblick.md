@@ -149,7 +149,7 @@ Was sich ändern wird:
 - **Integration:** Von proprietären Plugins zu offenen Protokollen (MCP)
 - **Autonomie:** Von Tool-Aufrufen zu längerfristigen Tasks (Cron, Remote Agents)
 
-Diese Dokumentation ist eine Momentaufnahme von Mai 2025.
+Diese Dokumentation ist eine Momentaufnahme von April 2026.
 Die nächste Version von Claude Code wird anders aussehen —
 aber die Grundmuster, die wir hier beschrieben haben, werden
 in irgendeiner Form bestehen bleiben.
