@@ -1133,3 +1133,99 @@ Commit `42a5005`, 7 Dateien (inkl. `index.md` via Pre-commit-Hook), gepusht auf 
 - Made changes.
 
 ---
+
+> Ist in diesem wavespeed.ai Blog Posts noch etwas drin, was in unsere Doku gehört oder sie etwas auflockern könnte?
+> <https://wavespeed.ai/blog/claude-code-agent-harness-insights>
+
+## Claude Opus 4.6 – Analyse wavespeed.ai Blogpost
+
+Gute Frage. Ich gleiche den Blog-Post systematisch mit unserer Doku ab:
+
+## Was der Blog-Post enthält vs. was wir schon haben
+
+| Thema im Blog-Post | Bei uns abgedeckt? | Interessant? |
+| --- | --- | --- |
+| `.map`-File Leak-Mechanismus | ❌ Nicht beschrieben | ✅ Ja — gehört in Kap 1 oder Entstehungsprotokoll als Kontext |
+| 512.000 Zeilen, ~1.900 Dateien | ❌ Nur angedeutet | ✅ Konkretes Zahlenwerk für die Einleitung |
+| BUDDY (virtuelles Haustier) | ❌ | ⚠️ Unterhaltsam, aber nicht architektur-relevant |
+| KAIROS (persistent assistant) | ❌ | ✅ Architektonisch interessant — passt zu 6.2 (Offene Fragen) |
+| ULTRAPLAN | ✅ Erwähnt in Kap 3 (Commands) | Schon drin |
+| Coordinator Mode | ✅ Kap 3.5, 4.6 | Schon drin, ausführlich |
+| 108 Feature Flags | ❌ Nur einzelne erwähnt | ✅ Gute Zahl für Kap 5 oder 6 |
+| Undercover Mode (`USER_TYPE === 'ant'`) | ❌ | ⚠️ Brisant, aber nicht architektur-relevant |
+| Bun + React/Ink | ✅ Kap 2, 3 | Schon drin |
+| Query Engine ~46.000 Zeilen | ❌ Wir sagen ~1.296 für `QueryEngine.ts` | ⚠️ Die 46k-Zahl bezieht sich vermutlich auf das gesamte Query-Subsystem |
+| 3-Layer Context Compression | ✅ Kap 3.2, 4.3 | Schon drin (wir haben sogar 6 Stufen identifiziert) |
+| 40+ Tools | ✅ Kap 3.6 (Tool-Referenz) | Schon drin |
+| Telemetrie (Frustration-Tracking) | ❌ | ⚠️ Interessant, aber außerhalb unseres Scope |
+| Voice Mode, Web Browser Tool, Daemon, Agent Triggers | ❌ | ✅ Passt zu Kap 6.3 (Nächste Generation) |
+
+## Empfehlung: Drei gezielte Ergänzungen
+
+### 1. Kap 1 — Hintergrund zum Leak (3–5 Sätze)
+
+Wir beschreiben bisher *was* wir analysieren, aber nicht *wie* der Code öffentlich wurde. Ein kurzer Absatz würde den Kontext setzen:
+
+> Version 2.1.88 enthielt versehentlich eine Source-Map-Datei (`main.js.map`), die den vollständigen Quellcode rekonstruierbar machte. Bun erzeugt diese Dateien standardmäßig; die `.npmignore` schloss sie nicht aus. Die Codebasis umfasst ~512.000 Zeilen in ~1.900 Dateien.
+
+### 2. Kap 6.2 — KAIROS als offene Frage erwähnen (2–3 Sätze)
+
+KAIROS (persistenter, proaktiver Hintergrund-Agent mit append-only Logs und „Dreaming"-Konsolidierung) passt perfekt zu den offenen Fragen — es zeigt, wohin Anthropic intern denkt:
+
+> Der Quellcode enthält Hinweise auf ein internes System namens KAIROS — einen persistenten Agenten, der Beobachtungen in append-only Logs sammelt und nachts in einem „Dreaming"-Prozess konsolidiert. Das Feature ist hinter einem internen Flag verborgen und nicht aktivierbar.
+
+### 3. Kap 6.3 — Feature-Flag-Zahlen und weitere geplante Tools
+
+Die Zahl 108 gated modules und die Liste (Voice Mode, Web Browser, Daemon, Agent Triggers) würden Abschnitt 6.3 konkretisieren.
+
+## Was ich **nicht** aufnehmen würde
+
+| Thema | Begründung |
+| --- | --- |
+| BUDDY | Spaßig, aber architektonisch irrelevant — gehört in einen Blog-Post, nicht in eine technische Analyse |
+| Undercover Mode | Politisch brisant, würde den sachlichen Ton der Doku gefährden. Wir dokumentieren Architektur, nicht Firmenethik |
+| Telemetrie-Details | Außerhalb unseres Scope (wir analysieren das Harness, nicht die Datenerfassung) |
+
+---
+
+Soll ich die drei Ergänzungen einbauen? Das wären insgesamt ~15 Zeilen in drei bestehenden Dateien, kein neues Kapitel.
+
+<!-- Next Commit-Message:
+
+-->
+
+<!-- TODO Bereinigungen dieser Datei:
+
+- Links entfernen wie bei `Read [main.tsx](../src/main.tsx#1-1), lines 1 to 210`,  
+  Neu: Read `main.tsx`, lines 1 to 210`
+
+- Leere Code-Blöcke entfernen (` ``` ` ohne Inhalt)
+
+- Prompt unter die Überschrift, nicht davor, z.B.:
+  ```markdown
+  ---
+
+  > Magst du in diesem Stil bitte ein nächstes Kapitel erstellen?  
+  > Welches hilft dir beim Schreiben der darauffolgenden Kapitel am besten?
+
+  ## Claude Opus 4.6 – Kapitel 2: Architekturübersicht
+
+  ```
+
+  wird:
+
+```markdown
+  ---
+
+  ## Claude Opus 4.6 – Kapitel 2: Architekturübersicht
+
+  > Magst du in diesem Stil bitte ein nächstes Kapitel erstellen?  
+  > Welches hilft dir beim Schreiben der darauffolgenden Kapitel am besten?
+
+  ```
+
+- Kein Inline-Code hinter 'Ran terminal command:", sonder immer language specified fenced code blocks.
+
+- Beachte die '## Markdown Lint-Regeln' und die '## Formatierung' in `copilot-instructions.md`
+
+-->

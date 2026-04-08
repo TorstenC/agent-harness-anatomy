@@ -4,7 +4,7 @@
 
 **Claude Code** ist Anthropics offizielles CLI-Tool (Command-Line Interface), das eine direkte Interaktion mit dem KI-Modell Claude über das Terminal ermöglicht. Es handelt sich um ein vollständiges **Agent Harness** – eine Laufzeitumgebung, die ein großes Sprachmodell (LLM) mit konkreten Werkzeugen (Tools) verbindet und so aus einem reinen Textgenerator einen handlungsfähigen Software-Engineering-Agenten macht.
 
-Der Quellcode wurde am **31. März 2026** über eine versehentlich im npm-Registry veröffentlichte `.map`-Datei geleakt und umfasst:
+Der Quellcode wurde am **31. März 2026** über eine versehentlich im npm-Registry veröffentlichte Source-Map-Datei (`main.js.map`) geleakt. Bun erzeugt diese Dateien standardmäßig als Debugging-Hilfsmittel; die `.npmignore` von Claude Code schloss sie jedoch nicht aus. So enthielt Version 2.1.88 auf npm die vollständige, rekonstruierbare Codebasis:
 
 | Kennzahl | Wert |
 | --- | --- |

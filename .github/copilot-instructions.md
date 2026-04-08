@@ -16,6 +16,7 @@ Diese Regeln gelten für Antworten im Chat sowie für alle `.md`-Dateien im Proj
 | MD009 | Keine Trailing Spaces | Genau 0 oder 2 Leerzeichen am Zeilenende, nie 1 |
 | MD024 | Keine doppelten Überschriften | Jede Überschrift muss innerhalb einer Datei einzigartig sein |
 | MD033 | Kein Inline-HTML | Ausnahme: `y_Quellenverzeichnis.md` verwendet bewusst HTML-Tags (GitHub Pages rendert Markdown-Links in HTML-Tabellen nicht) |
+| MD040 | Fenced code blocks should have a language specified | Keine leeren Code-Blöcke und mindestens `text` angeben |
 
 ## Formatierung
 

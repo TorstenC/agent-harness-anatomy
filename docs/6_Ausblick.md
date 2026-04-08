@@ -58,6 +58,7 @@ vollständig klären:
 | Was passiert bei Prompt-Cache-Invalidierung? | Die Cache-Stabilität durch Tool-Sortierung ist ein cleveres Detail — aber wie reagiert das System auf häufige MCP-Server-Änderungen? |
 | Wie arbeitet das Bridge-System genau? | `src/bridge/` (~25 Dateien) implementiert Remote-Sessions, ist aber in der öffentlichen Version weitgehend deaktiviert |
 | Wie werden Kosten tatsächlich kontrolliert? | `cost-tracker.ts` und `costHook.ts` existieren, aber die Limits und Eskalationsmechanismen sind nur angedeutet |
+| Was steckt hinter KAIROS? | Der Quellcode enthält Hinweise auf einen persistenten Hintergrund-Agenten namens KAIROS, der Beobachtungen in append-only Logs sammelt und in einem nächtlichen „Dreaming"-Prozess konsolidiert. Das Feature ist hinter einem internen Flag verborgen und nicht aktivierbar — ob es ein Experiment, ein verworfener Prototyp oder eine kommende Produktrichtung ist, bleibt offen |
 
 ---
 
@@ -84,7 +85,17 @@ im Tool-Verzeichnis bestätigen diese Richtung.
 ### Agents-as-Platform
 
 Claude Code entwickelt sich von einem Entwickler-Tool zu einer
-Plattform. Die Kombination aus:
+Plattform. Neben den ~30 Build-Time Feature-Gates (beschrieben in
+[Kapitel 2.8](2_Architekturübersicht.md)) enthält der Quellcode
+insgesamt **108 gated Module**, die im öffentlichen Build nicht
+aktiviert sind. Darunter befinden sich unter anderem:
+
+- **Voice Mode** — Sprach-Interaktion mit Claude Code
+- **Web Browser Tool** — Browser-Zugriff aus dem Terminal heraus
+- **Daemon Mode** — Claude Code als Hintergrundprozess
+- **Agent Triggers** — Event-basierte, automatische Agent-Aktivierung
+
+Die Kombination aus:
 
 - **MCP** für externe Tool-Integration
 - **Skills** für Prompt-Erweiterungen

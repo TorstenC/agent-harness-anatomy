@@ -3,3 +3,6 @@ src/
 
 # <https://github.com/Exhen/claude-code-2.1.88?tab=readme-ov-file#readme>
 claude-code-2.1.88/
+
+# Temporary files to share with AI assistants. Not part of the documentation.
+temp/
