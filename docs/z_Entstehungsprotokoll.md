@@ -659,3 +659,189 @@ Fertig. Was eingerichtet wurde:
 > Falls keine Unsicherheiten bestehen, dann committe und pushe die Änderungen bitte gleich.
 
 ## Claude Opus 4.6 – README-Update & Kapitel 4
+
+Ich lese zuerst den aktuellen Stand der README und der Kapitel 4-6, um zu verstehen was schon da ist:
+
+Created 3 todos
+
+- Read `README.md`
+- Read `docs/4_Typische_Abläufe.md`
+- Read `docs/5_Erweiterungsmöglichkeiten.md`
+- Read `docs/6_API-Referenz.md`
+
+Die Kapitel 4/5/6 sind Platzhalter. Jetzt aktualisiere ich die README: Links für die Platzhalter-Kapitel anlegen und Projektstruktur ergänzen.
+
+- Using "Replace String in File"
+
+Jetzt die Projektstruktur um die neuen Dateien ergänzen:
+
+- Using "Replace String in File"
+- Starting (2/3) *Kapitel 4 schreiben*
+
+Jetzt analysiere ich die Quelldateien für die Sequenzdiagramme in Kapitel 4:
+
+- Read `main.tsx`, lines 1 to 200
+- Read `setup.ts`, lines 1 to 100
+- Read `replLauncher.tsx`
+
+Jetzt lese ich die relevanten Dateien für die Sequenzdiagramme — insbesondere die Permission-Pipeline und den Entrypoint-Flow:
+
+- Read `main.tsx`, lines 200 to 500
+- Read `entrypoints/init.ts`, lines 1 to 200
+
+Summarized conversation history
+
+- Read `entrypoints/init.ts`, lines 200 to 341
+- Read `main.tsx`, lines 500 to 800
+- Read `main.tsx`, lines 800 to 1100
+- Read `main.tsx`, lines 1100 to 1500
+- Read `setup.ts`, lines 100 to 200
+- Read `setup.ts`, lines 200 to 478
+- Read `query.ts`, lines 1 to 200
+- Read `query.ts`, lines 200 to 500
+- Read `services/tools/toolOrchestration.ts`
+
+Now let me read the tool execution flow and the permission checking:
+
+- Read `services/tools/toolExecution.ts`, lines 1 to 200
+
+Searched for files matching `**/AgentTool*`, no matches
+
+- Read `services/tools/toolExecution.ts`, lines 200 to 400
+- Read `services/tools/toolExecution.ts`, lines 400 to 700
+- Searched text for `runAgent|AgentTool` (`**/src/tools/**/prompt.ts`), no results
+- Searched for files matching `**/src/tools/**/Agent*`, no matches
+- Searched text for `runAgent|runForkedAgent` (`**/src/skills/**`), no results
+- Searched text for `runAgent|runForkedAgent` (`**/src/**/*.ts`), no results
+- Searched text for `runAgent|runForkedAgent`, 7 results
+- Searched for files matching `**/src/tools/AgentTool/**`, no matches
+
+The AgentTool files seem to not be in the local source. Let me check what we have and read the remaining key files:
+
+- Read `src/query.ts`, lines 500 to 800
+- Read `src/services/tools/toolExecution.ts`, lines 700 to 900
+
+Now let me read the rest of the query loop to understand the tool execution and continue logic:
+
+- Read `src/query.ts`, lines 800 to 1200
+
+Now let me read the remaining part of the query loop to see the tool-execution and continue logic:
+
+- Read `src/query.ts`, lines 1200 to 1500
+
+Now let me also read the existing Chapter 3 to match style, and read the remaining part of the query loop:
+
+- Read `src/query.ts`, lines 1500 to 1730
+- Read `docs/3_Hauptkomponenten.md`, lines 1 to 60
+
+Now I have enough context to write a comprehensive Chapter 4. Let me also check the current docs/4 file and the existing chapter structure:
+
+- Read `docs/3_Hauptkomponenten.md`, lines 580 to 776
+
+Now I have comprehensive understanding. Let me write Chapter 4:
+
+- Read todo list
+
+> Continue to iterate?  
+> ![object Object](./assets/Pasted_image_3.png)  
+> Copilot has been working on this problem for a while. It can continue to iterate, or you can send a new message to refine your prompt. Configure max requests:  
+> ![chat.agent.maxRequests](./assets/Pasted_image_4.png)
+>
+> TorstenC selected "Continue"
+
+- Using "Replace String in File"
+
+Let me fix the lint errors:
+
+- Using "Replace String in File"
+- Using "Replace String in File"
+
+Now let me check for remaining errors:
+
+- Checked `docs/4_Typische_Abläufe.md`, 1 problem found
+
+There's another `### Sequenz` heading that's duplicated. Let me find it:
+
+- Searched text for `### Sequenz` (`**/docs/4_Typische_Abläufe.md`), 4 results
+- Read `docs/4_Typische_Abläufe.md#320-320`, lines 320 to 327
+- Using "Replace String in File"
+- Checked `docs/4_Typische_Abläufe.md`, no problems found
+
+No more errors. Now let me update the todo and commit + push:
+
+- Starting (3/3) *Commit & Push*
+- Ran terminal command:
+  
+  ```bash
+  git add -A && git status
+  ```
+
+Hmm, the placeholder files for 5 and 6 are showing as new — but they should already have been there. Let me check. Also I notice `index.md` is not modified — the pre-commit hook should copy README.md. Let me check:
+
+- Ran terminal command:
+
+  ```bash
+  cat .git/hooks/pre-commit
+  ```
+
+Good, the pre-commit hook will trigger during commit since README.md is staged. Let me commit:
+
+- Ran terminal command:
+  
+  ```bash
+  cd /home/eb0crul/Repos/agent-harness-anatomy && git commit -m "docs: Kapitel 4 – Typische Abläufe + README-Update
+
+  - Kapitel 4 (docs/4_Typische_Abläufe.md): 9 Abschnitte mit
+    ASCII-Sequenzdiagrammen für Startup, Query-Lifecycle,
+    Query-Schleife, Tool-Pipeline, Fallback/Recovery,
+    Sub-Agent-Spawning, Session-Resume, Hooks, Timing
+  - README.md: Links zu Kap 4/5/6 ergänzt, Projektstruktur aktualisiert
+  - Placeholder-Dateien für Kap 5 + 6 angelegt"
+   ```
+
+6 files — the pre-commit hook ran and copied README.md → docs/index.md. Now push:
+
+- Ran terminal command:  
+
+  ```bash
+  git push
+  ```
+
+- Completed (3/3) *Commit & Push*
+
+Alles erledigt! Hier eine Zusammenfassung:
+
+### ✅ README redigiert
+
+- Links zu **Kap 4, 5, 6** in der Dokumentations-Tabelle ergänzt (auch wenn 5+6 noch Placeholder sind)
+- Projektstruktur-Baum um die drei neuen Dateien erweitert
+
+### ✅ Kapitel 4 geschrieben (~760 Zeilen)
+
+**4_Typische_Abläufe.md** mit 9 Abschnitten:
+
+| # | Abschnitt | Inhalt |
+| --- | --- | --- |
+| 4.1 | **Startup** | Vollständiger Pfad cli.tsx → main() → init() → setup() → launchRepl(), inkl. Deferred Prefetches und `--bare`/`--print`-Pfade |
+| 4.2 | **Query-Lifecycle** | 4 Phasen: Vorverarbeitung → System-Prompt → API+Tool-Loop → Persistenz |
+| 4.3 | **Query-Schleife** | `while(true)`-Kern mit State-Modell, 6-stufiger Komprimierung, Streaming, Tool-Execution, Attachments, Continue/Terminal-Gründe |
+| 4.4 | **Tool-Ausführung** | 5-Phasen-Pipeline (Lookup → Validierung → Permission → Execution → Nachbereitung), parallel vs. seriell, StreamingToolExecutor |
+| 4.5 | **Fallback & Recovery** | Model-Fallback (529), Max-Output-Tokens (Escalation + 3× Recovery), Prompt-Too-Long (Kaskade: Collapse → Reactive Compact) |
+| 4.6 | **Sub-Agent-Spawning** | Foreground, Background, Coordinator-Modus |
+| 4.7 | **Session-Resume & Compact** | `--resume`/`--continue`, Auto-Compact-Ablauf |
+| 4.8 | **Hooks im Ablauf** | Alle Trigger-Punkte + Datenfluss-Beispiel (PreToolUse) |
+| 4.9 | **Timing-Überblick** | Typischer Turn mit Zeitbereichen pro Phase |
+
+### ✅ Commit & Push
+
+Commit `9cfcb21`, erfolgreich auf `main` gepusht. Pre-commit Hook hat index.md automatisch aktualisiert.
+
+- Made changes.
+
+---
+
+> - In der README.md steht noch "4. Typische Abläufe 🔲 … (geplant)"  
+> - Bitte achte in Zukunft auf "MD009/no-trailing-spaces: Trailing spaces [Expected: 0 or 2; Actual: 1]". Wo merken wir uns sowas? Gibt es dafür etwas wie eine `COPILOT.md` oder so, wo wir solche Regeln sammeln?  
+> - Falls keine weiteren Anmerkungen oder Fragen bestehen, dann committe und pushe die Änderungen bitte gleich.
+
+## Claude Opus 4.6 – Lint-Regeln & Dokumentation
