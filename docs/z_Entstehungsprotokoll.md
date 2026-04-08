@@ -742,11 +742,6 @@ Now I have comprehensive understanding. Let me write Chapter 4:
 
 - Read todo list
 
-> Continue to iterate?  
-> ![object Object](./assets/Pasted_image_3.png)  
-> Copilot has been working on this problem for a while. It can continue to iterate, or you can send a new message to refine your prompt. Configure max requests:  
-> ![chat.agent.maxRequests](./assets/Pasted_image_4.png)
->
 > TorstenC selected "Continue"
 
 - Using "Replace String in File"
@@ -997,6 +992,143 @@ Commit `6b7f934` gepusht. Zusammenfassung:
 | **README: Projektstruktur** | `copilot-instructions.md` und `x_Kommentare_von_Gemini.md` ergänzt |
 | **copilot-instructions** | Backtick-Fragmente entfernt (hatten Lint-Fehler „Unknown tool" verursacht) |
 | **x_Kommentare_von_Gemini.md** | War bereits lokal vorhanden, jetzt im Repo |
+
+- Made changes.
+
+---
+
+> Schau dir mal den letzten Teil der Datei an.  
+> Die Zeilen 973 bis 1044 sind deine letzte Antwort per cut & paste.  
+> Magst du diese Zeilen im Stil der Kapitel davor anpassen und dir bei Bedarf Notizen dazu in der `copilot-instructions.md` machen?
+
+## Claude Opus 4.6 – README-Kapitelstil & Copilot-Instructions
+
+(…)
+
+Hier was ich gemacht habe:
+
+**z_Entstehungsprotokoll.md** (Zeilen 973–1044 bereinigt):
+
+- -URIs → saubere `Read datei.ts`-Stichpunkte
+- Leere Code-Blöcke (` ``` ``` `) entfernt
+- `Completed (1/4)` → entfernt
+- Doppeltes `---` nach Überschrift → entfernt
+- `copilot-instructions.md` und `x_Kommentare_von_Gemini.md` in Backticks gesetzt
+- `Made changes.` → `- Made changes.` (konsistent mit den anderen Abschnitten)
+
+**`copilot-instructions.md`** — neuer Abschnitt „Entstehungsprotokoll" mit Stil-Konventionen:
+
+- Kapitelüberschrift, Tool-Aufrufe, keine file-URIs, keine leeren Code-Blöcke, keine Todo-Nummern, Zusammenfassungstabelle, Abschluss-Marker`) entfernt
+- `Completed (1/4)` → entfernt
+- Doppeltes `---` nach Überschrift → entfernt
+- `copilot-instructions.md` und `x_Kommentare_von_Gemini.md` in Backticks gesetzt
+- `Made changes.` → `- Made changes.` (konsistent mit den anderen Abschnitten)
+
+**`copilot-instructions.md`** — neuer Abschnitt „Entstehungsprotokoll" mit Stil-Konventionen:
+
+- Kapitelüberschrift, Tool-Aufrufe, keine file-URIs, keine leeren Code-Blöcke, keine Todo-Nummern, Zusammenfassungstabelle, Abschluss-Marker
+
+- Made changes.
+
+---
+
+> Wir haben einen neuen Anhang. Baust du den Bitte ins README.md ein und macht Commit&Sync?
+
+## Claude Opus 4.6 – Anhang ins README einbauen
+
+- Read `README.md`, lines 46 to 60
+- Read `README.md`, lines 103 to 120
+
+Neuen Anhang `w_Rust-Projekt_claw-code.md` an beiden Stellen eingebaut — Dokumentationstabelle und Projektstruktur:
+
+- Using "Replace String in File" (2×)
+- Checked `README.md`, no problems found
+- Ran terminal command: `git add -A && git status`
+- Ran terminal command: `git commit -m "docs: Anhang w_Rust-Projekt_claw-code ..."`
+- Ran terminal command: `git push`
+
+Commit `ba9089e` gepusht.
+
+| Stelle | Änderung |
+| --- | --- |
+| **Dokumentationstabelle** | Neue Zeile: Anhang „Rust-Projekt claw-code" mit Link und Beschreibung, alphabetisch vor den anderen Anhängen (w < x < y < z) |
+| **Projektstruktur** | `w_Rust-Projekt_claw-code.md` eingefügt |
+
+Made changes.
+
+---
+
+> Strategische Frage: Wie weit sollten wir es mit Kap 5 (Erweiterungsmöglichkeiten) und Kap 6 (API-Referenz) noch treiben? Ich denke an ein Folgekapitel „6. Ausblick – Wie die Story weitergeht".
+
+## Claude Opus 4.6 – Strategische Planung Kap 5 & 6
+
+Analyse: 80 % von Kap 5 steht bereits verteilt in Kap 3 und 4. Eine klassische API-Referenz hat bei einem nicht-öffentlichen, sich ändernden Codebase ein Haltbarkeitsproblem.
+
+**Empfehlung:**
+
+| Kapitel | Aktion | Begründung |
+| --- | --- | --- |
+| **5. Erweiterungsmöglichkeiten** | Schlanke Version (~150 Zeilen): MCP vertiefen, Rest als Verweiskapitel auf Kap 3/4 mit Praxisbeispielen | Anleitung zum Selbermachen, nicht nur Analyse |
+| **6.** ~~API-Referenz~~ → **Ausblick** | Neues Kapitel: „Ausblick — Wie die Story weitergeht" mit Learnings, offenen Fragen, Vergleichstabelle | Zukunftsgerichtet statt rückwärtsgewandt |
+
+Gliederungsentwurf für Kap 6: Was wir gelernt haben → Offene Fragen → Nächste Generation (claw-code, Coordinator, MCP) → Vergleichbare Systeme (Cursor, Windsurf, Cline, Aider) → Fazit.
+
+> Ja, gern. Mach' das so. `w_Rust-Projekt_claw-code.md` erstmal nicht löschen.
+> BTW: In der README-Tabelle bitte U+202F (Narrow No-Break Space) zwischen Kapitelnummer und Titel verwenden.
+
+- Made changes.
+
+---
+
+## Claude Opus 4.6 – Kapitel 5 & 6 fertigstellen
+
+Fünf Aufgaben: copilot-instructions U+202F-Regel, Kap 5, Kap 6, README, Commit.
+
+**copilot-instructions.md** — U+202F-Regel ergänzt:
+
+- Kapiteleinträge: `1.` + U+202F + Titel
+- Anhang-Einträge: normales Leerzeichen nach `Anhang:`
+
+**Kapitel 5 — Quelldateien analysiert:**
+
+- Read `MCPTool.ts`, `mcpSkillBuilders.ts`, `loadSkillsDir.ts` (lines 1–350), `bundledSkills.ts`, `SkillTool.ts`, `builtinPlugins.ts`
+- Read `MCPConnectionManager.tsx`, `entrypoints/mcp.ts`
+- Read `skills/bundled/index.ts`, `skills/bundled/remember.ts`
+- Searched text for MCP/Skill/Plugin-Referenzen in Kap 3
+- Read `docs/3_Hauptkomponenten.md`, lines 697 to 776
+
+**`5_Erweiterungsmöglichkeiten.md`** — 226 Zeilen geschrieben:
+
+| Abschnitt | Inhalt |
+| --- | --- |
+| **5.1 Überblick** | Vier Erweiterungsebenen (CLAUDE.md → Skills → MCP → Plugins), ASCII-Diagramm |
+| **5.2 Skills** | Lade-Hierarchie (6 Quellen), Frontmatter-Referenz, praktisches Beispiel, Bundled-Skills-Tabelle (~12 Skills) |
+| **5.3 MCP-Server** | Architektur-Diagramm, Schlüssel-Dateien-Tabelle, zwei Richtungen (Client + Server), Tool-Pool-Integration |
+| **5.4 Plugins** | Built-in vs. Marketplace, Plugin-Identifikation |
+| **5.5 Custom Agents** | Beispiel-Konfiguration `.claude/agents/`, `mcpServers`-Frontmatter |
+| **5.6 Entscheidungshilfe** | Tabelle: Anforderung → empfohlene Ebene |
+
+**`6_Ausblick.md`** — 155 Zeilen geschrieben (Datei umbenannt von `6_API-Referenz.md`):
+
+| Abschnitt | Inhalt |
+| --- | --- |
+| **6.1 Learnings** | 5 zentrale Erkenntnisse (Architektur > Modell, Kontext-Management, Permissions, MCP, React/Ink) |
+| **6.2 Offene Fragen** | Coordinator, MCP-Skalierung, Cache-Invalidierung, Bridge, Kosten |
+| **6.3 Nächste Generation** | claw-code (Querverweis auf Anhang w), Coordinator/Multi-Agent, Agents-as-Platform |
+| **6.4 Vergleichbare Systeme** | Tabelle (6 Systeme), gemeinsame Muster, Alleinstellungsmerkmale |
+| **6.5 Fazit** | Trends: TypeScript→Rust, Single→Multi-Agent, Plugins→MCP, Tools→Tasks |
+
+**README.md** — aktualisiert:
+
+- Kap 5/6 Status 🔲→✅, Beschreibungen angepasst
+- `6_Ausblick.md` in Projektstruktur-Baum
+- U+202F konsistent bei allen 6 Kapiteleinträgen (Kap 1 hatte überflüssige U+200C)
+
+**`1_Einleitung_&_Zweck.md`** — Inhaltsverzeichnis: Kap 5/6 Titel aktualisiert.
+
+**`w_Rust-Projekt_claw-code.md`** — unverändert beibehalten.
+
+Commit `42a5005`, 7 Dateien (inkl. `index.md` via Pre-commit-Hook), gepusht auf `origin/main`.
 
 - Made changes.
 
