@@ -9,17 +9,17 @@
 
 ## Markdown Lint-Regeln
 
-Diese Regeln gelten für alle `.md`-Dateien im Projekt:
+Diese Regeln gelten für Antworten im Chat sowie für alle `.md`-Dateien im Projekt:
 
 | Regel | Beschreibung | Hinweis |
 | --- | --- | --- |
-| MD009 | Keine Trailing Spaces | `Expected: 0 or 2; Actual: 1` — genau 0 oder 2 Leerzeichen am Zeilenende, nie 1 |
-| MD024 | Keine doppelten Überschriften | Jede `###`-Überschrift muss innerhalb einer Datei einzigartig sein |
-| MD033 | Kein Inline-HTML | Ausnahme: `y_Quellenverzeichnis.md` verwendet bewusst `<table>`/`<a>`-Tags (GitHub Pages rendert Markdown-Links in HTML-Tabellen nicht) |
+| MD009 | Keine Trailing Spaces | Genau 0 oder 2 Leerzeichen am Zeilenende, nie 1 |
+| MD024 | Keine doppelten Überschriften | Jede Überschrift muss innerhalb einer Datei einzigartig sein |
+| MD033 | Kein Inline-HTML | Ausnahme: `y_Quellenverzeichnis.md` verwendet bewusst HTML-Tags (GitHub Pages rendert Markdown-Links in HTML-Tabellen nicht) |
 
 ## Formatierung
 
-- **Leerzeile nach `###`-Überschriften** (vor dem ersten Absatz)
+- **Leerzeile nach Überschriften** (vor dem ersten Absatz)
 - **Leerzeile vor und nach `---`-Trennlinien**
 - **Leerzeile vor und nach Code-Blöcken** (vor ` ``` ` und nach ` ``` `)
 - **Keine Leerzeile** zwischen Tabellen-Header und erster Datenzeile
@@ -27,7 +27,7 @@ Diese Regeln gelten für alle `.md`-Dateien im Projekt:
 ## Quellenverweise
 
 - Quelldateien werden in `docs/y_Quellenverzeichnis.md` zentral verlinkt
-- In den Kapiteln wird per Anker verwiesen: `[Quelle](y_Quellenverzeichnis.md#src-queryengine)`
+- In den Kapiteln wird per Anker verwiesen, z.B. Quelle als Link auf `y_Quellenverzeichnis.md`
 - Links zu den zwei öffentlichen Mirrors (ultraworkers/claw-code, Exhen/claude-code-2.1.88)
 
 ## Projektstruktur

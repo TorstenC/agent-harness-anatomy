@@ -845,3 +845,127 @@ Commit `9cfcb21`, erfolgreich auf `main` gepusht. Pre-commit Hook hat index.md a
 > - Falls keine weiteren Anmerkungen oder Fragen bestehen, dann committe und pushe die Änderungen bitte gleich.
 
 ## Claude Opus 4.6 – Lint-Regeln & Dokumentation
+
+Ich sehe die drei Punkte. Lasse mich alles der Reihe nach erledigen:
+
+- Da ist es. Jetzt alle drei Aufgaben:
+
+**1. README: Kap 4 Status aktualisieren:**
+
+- Auch in der Projektstruktur den Kommentar aktualisieren:
+- Starting (2/3) *Copilot-Instructions erstellen*
+
+**2. Copilot-Instructions mit Lint-Regeln erstellen:**
+
+VS Code erkennt `.github/copilot-instructions.md` automatisch und übergibt den Inhalt an GitHub Copilot als Kontext. Das ist genau der richtige Ort für projektweite Regeln.
+
+- Created `.github/copilot-instructions.md`
+
+Die "Fehler" sind harmlos — der Markdown-Linter interpretiert Backtick-Fragmente als Tool-Referenzen und relative Links als Dateipfade aus dem .github-Verzeichnis. Das ist kein echtes Problem, da die Datei nur als Copilot-Instruktionen gelesen wird, nicht als Teil der GitHub Pages.
+
+- Starting (3/3) *Commit & Push*
+
+**3. Commit & Push:**
+
+- Ran terminal commands:
+
+  ```bash
+  git add -A && git status
+  git status
+   cd /home/eb0crul/Repos/agent-harness-anatomy && git commit -m "docs: README Kap-4-Status ✅ + Copilot-Instructions mit Lint-Regeln
+
+  - README.md: Kapitel 4 Status 🔲→✅, Inhaltsbeschreibung aktualisiert
+  - .github/copilot-instructions.md: Projektweite Regeln für Copilot
+  (Sprache, MD-Lint-Regeln MD009/MD024/MD033, Formatierung, Quellenverweise)" 
+  git push
+  ```
+
+- Completed (3/3) *Commit & Push*
+
+Alle drei Punkte erledigt:
+
+### ✅ README Kap 4 Status
+
+`🔲 … (geplant)` → `✅ Startup-Sequenz, Query-Lifecycle, Query-Schleife, Tool-Pipeline, Fallback & Recovery, Sub-Agent-Spawning, Session-Resume, Hooks, Timing`
+
+### ✅ copilot-instructions.md erstellt
+
+VS Code erkennt diese Datei automatisch als Copilot-Kontext. Inhalt:
+
+| Abschnitt | Regeln |
+| --- | --- |
+| **Sprache & Stil** | Deutsch, Conventional Commits, ASCII-Diagramme |
+| **Markdown Lint** | MD009 (Trailing Spaces: 0 oder 2, nie 1), MD024 (keine doppelten Überschriften), MD033 (kein Inline-HTML, Ausnahme Quellenverzeichnis) |
+| **Formatierung** | Leerzeilen nach `###`, um `---`, um Code-Blöcke |
+| **Quellenverweise** | Zentral in y_Quellenverzeichnis.md, Anker-Referenzen in Kapiteln |
+
+### ✅ Commit & Push (2)
+
+Commit `6b7ed6e`, erfolgreich auf `main` gepusht.
+
+> @workspace /explain Unknown tool or toolset '`-Überschrift'.  
+> ![Unknown tool or toolset](./assets/Pasted_image_5.png)
+
+Das Problem ist, dass der Backtick in '`###`-Überschrift' von deinem Tool-Parser als Tool-Name interpretiert wird. Der Backtick-Ausdruck `` `###`-Überschrift `` wird am `-` aufgetrennt, und der Parser versucht `` `###` `` als Tool zu resolven.
+
+**Lösung:** Den gesamten Ausdruck in einen einzelnen Inline-Code-Block packen, damit kein "nackter" Bindestrich zwischen Code und Text steht:
+
+````markdown
+// ...existing code...
+| MD024 | Keine doppelten Überschriften | Jede Überschrift (`###` usw.) muss innerhalb einer Datei einzigartig sein |
+// ...existing code...
+````
+
+**Was sich geändert hat:** Statt `` `###`-Überschrift `` (wo der Backtick vor dem Bindestrich endet und der Parser `-Überschrift` als Suffix parst) steht jetzt `Überschrift` als normales Wort und `` `###` `` separat in Klammern.
+
+Alternativ, wenn du den Originalwortlaut beibehalten willst, alles in einen Code-Span:
+
+````markdown
+// ...existing code...
+| MD024 | Keine doppelten Überschriften | Jede `###-Überschrift` muss innerhalb einer Datei einzigartig sein |
+// ...existing code...
+````
+
+Beide Varianten vermeiden das Parsing-Problem.
+
+> Setze die erste variante um. Ein Commit ist noch nicht nötig.
+
+- Read `.github/copilot-instructions.md`, lines 12 to 25
+
+Hmm, auch isolierte `` `###` `` wird als Tool geparst. Das Backtick-Fragment wird als Tool-Name interpretiert. Ich ersetze es durch ausgeschriebenen Text ohne Backticks:
+
+Der Linter interpretiert `###)` als Tool-Name. Hier wird `###` in der Tabellenzelle als Markdown-Heading geparst. Ich formuliere komplett ohne `###`:
+
+- Checked `.github/copilot-instructions.md`, 1 problem found
+
+Die einzige verbleibende "Warnung" ist ein relativer Link innerhalb eines Inline-Code-Blocks — der Linter versucht die Datei relativ zu .github aufzulösen. Das ist ein Beispiel-Verweis, kein echter Link. Kein echtes Problem, aber ich kann es entschärfen:
+
+- Read `.github/copilot-instructions.md`, lines 27 to 33
+
+Der Linter parst auch `#src-queryengine` in Backticks als Referenz. Ich entferne die Backticks.
+
+Der Linter verfolgt `#src-queryengine` als Fragment-Referenz. Ich entferne das konkrete Beispiel.
+
+- Checked `.github/copilot-instructions.md`, no problems found
+
+Keine Fehler mehr. Die Datei sieht jetzt so aus:
+
+- Read `.github/copilot-instructions.md`
+
+Sauber — keine Lint-Fehler. Die problematischen Stellen waren Backtick-Fragmente mit Bindestrichen und `#`-Zeichen, die der Markdown-Linter als Tool-Referenzen bzw. Heading-Marker interpretiert hat.
+
+- Made changes.
+
+---
+
+> Stimmt "… die interne Architektur von … Anthropics … CLI-Tool, …" in der `README.md`?
+> Es ist nicht die CLI, sondern die Agent-Harness, die wir analysieren. Das CLI-Tool ist nur der Einstiegspunkt.
+>
+> Commit mit:
+>
+> - "+ .github/copilot-instructions.md"
+> - "+ docs/x_Kommentare_von_Gemini.md"
+> - "Update README:
+>   - CLI → Agent-Harness,
+>   - Kommentare_von_Gemini,
+>   - copilot-instructions"

@@ -2,7 +2,7 @@
 
 > Wie macht man aus einem reinen LLM-Textgenerator einen handlungsfähigen Software-Engineering-Agenten?
 
-[Dieses Repository](https://github.com/TorstenC/agent-harness-anatomy?tab=readme-ov-file#readme) dokumentiert und analysiert die interne Architektur von **Claude Code** — Anthropics offiziellem CLI-Tool, das das KI-Modell Claude über eine Laufzeitumgebung (Agent Harness) mit realen Werkzeugen verbindet: Shell, Dateisystem, Web, IDE-Integration und mehr.
+[Dieses Repository](https://github.com/TorstenC/agent-harness-anatomy?tab=readme-ov-file#readme) dokumentiert und analysiert die interne Architektur des **Agent Harness von Claude Code** — der Laufzeitumgebung, die Anthropics KI-Modell Claude über ~40 Werkzeuge mit der realen Welt verbindet: Shell, Dateisystem, Web, IDE-Integration und mehr.
 
 ## Hintergrund
 
@@ -45,12 +45,13 @@ Die Dokumentation in diesem Repository erklärt, wie diese drei Teile zusammensp
 
 | Kapitel | Status | Inhalt |
 | --- | :---: | --- |
-| [1.‌‌‌ Einleitung & Zweck](https://torstenc.github.io/agent-harness-anatomy/1_Einleitung_&_Zweck) | ✅ | Was ist Claude Code? Was ist ein Agent Harness? Technologiestack |
+| [1.‌‌‌ Einleitung & Zweck](https://torstenc.github.io/agent-harness-anatomy/1_Einleitung_&_Zweck) | ✅ | Was ist Claude Code? Was ist ein Agent Harness? Technologiestack |
 | [2. Architekturübersicht](https://torstenc.github.io/agent-harness-anatomy/2_Architekturübersicht) | ✅ | 9-Schichten-Modell, Startup-Ablauf, Query-Lifecycle, State-Management, Berechtigungen, Feature Flags |
-| [3. Hauptkomponenten](https://torstenc.github.io/agent-harness-anatomy/3_Hauptkomponenten) | ✅ | QueryEngine, Query-Schleife, Tool-System (Interface, Registry, Ausführung), Command-System, AgentTool, BashTool, Coordinator, Skills/Plugins |
-| [4. Typische Abläufe](https://torstenc.github.io/agent-harness-anatomy/4_Typische_Abläufe) | ✅ | Startup-Sequenz, Query-Lifecycle, Query-Schleife, Tool-Pipeline, Fallback & Recovery, Sub-Agent-Spawning, Session-Resume, Hooks, Timing |
-| [5. Erweiterungsmöglichkeiten](https://torstenc.github.io/agent-harness-anatomy/5_Erweiterungsmöglichkeiten) | 🔲 | Plugin-System, Skill-System, MCP-Integration, Custom Agents (geplant) |
-| [6. API-Referenz](https://torstenc.github.io/agent-harness-anatomy/6_API-Referenz) | 🔲 | Wichtige Typen, Interfaces und Funktionen (geplant) |
+| [3. Hauptkomponenten](https://torstenc.github.io/agent-harness-anatomy/3_Hauptkomponenten) | ✅ | QueryEngine, Query-Schleife, Tool-System (Interface, Registry, Ausführung), Command-System, AgentTool, BashTool, Coordinator, Skills/Plugins |
+| [4. Typische Abläufe](https://torstenc.github.io/agent-harness-anatomy/4_Typische_Abläufe) | ✅ | Startup-Sequenz, Query-Lifecycle, Query-Schleife, Tool-Pipeline, Fallback & Recovery, Sub-Agent-Spawning, Session-Resume, Hooks, Timing |
+| [5. Erweiterungsmöglichkeiten](https://torstenc.github.io/agent-harness-anatomy/5_Erweiterungsmöglichkeiten) | 🔲 | Plugin-System, Skill-System, MCP-Integration, Custom Agents (geplant) |
+| [6. API-Referenz](https://torstenc.github.io/agent-harness-anatomy/6_API-Referenz) | 🔲 | Wichtige Typen, Interfaces und Funktionen (geplant) |
+| Anhang: [Kommentare von Gemini](https://torstenc.github.io/agent-harness-anatomy/x_Kommentare_von_Gemini) | ✅ | Exklusive Einblicke und Kommentare von Gemini (Google bzw. Mutterkonzern Alphabet) zum Leak und zur Architektur |
 | Anhang: [Quellenverzeichnis](https://torstenc.github.io/agent-harness-anatomy/y_Quellenverzeichnis) | ✅ | Analysierte Quelldateien mit Links zu zwei öffentlichen Mirrors |
 | Anhang: [Entstehungsprotokoll](https://torstenc.github.io/agent-harness-anatomy/z_Entstehungsprotokoll) | ✅ | Making-of, Analyseprozess, Herausforderungen, Learnings |
 
@@ -98,6 +99,8 @@ Jeder Tool-Aufruf durchläuft eine **5-stufige Permission-Pipeline**: Config-Rul
 ```text
 .
 ├── README.md                          ← dieses Dokument
+├── .github/
+│   └── copilot-instructions.md        ← Projektweite Regeln für GitHub Copilot
 ├── .gitignore                          ← schließt src/ aus (Link zum Originalcode)
 ├── docs/
 │   ├── 1_Einleitung_&_Zweck.md        ← Was und warum
@@ -106,6 +109,7 @@ Jeder Tool-Aufruf durchläuft eine **5-stufige Permission-Pipeline**: Config-Rul
 │   ├── 4_Typische_Abläufe.md           ← Sequenzdiagramme & Abläufe
 │   ├── 5_Erweiterungsmöglichkeiten.md  ← Plugins, Skills, MCP (in Arbeit)
 │   ├── 6_API-Referenz.md               ← Typen & Interfaces (in Arbeit)
+│   ├── x_Kommentare_von_Gemini.md      ← Kommentare von Gemini zum Leak
 │   ├── y_Quellenverzeichnis.md         ← Analysierte Quelldateien mit Links
 │   └── z_Entstehungsprotokoll.md       ← Making-of & Entstehungsprotokoll
 └── src/                               ← NICHT im Repo (siehe .gitignore)
