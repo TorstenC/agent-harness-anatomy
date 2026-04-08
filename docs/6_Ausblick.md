@@ -8,7 +8,7 @@
 
 ## 6.1 Was wir aus dem Leak gelernt haben
 
-Der geleakte Quellcode von Claude Code (Version 2.1.88, Mai 2025) ist die
+Der geleakte Quellcode von Claude Code (Version 2.1.88, 31. März 2026) ist die
 bisher detaillierteste öffentliche Quelle darüber, wie ein kommerzielles
 AI-Agent-System intern aufgebaut ist.
 
