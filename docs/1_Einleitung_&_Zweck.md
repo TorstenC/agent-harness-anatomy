@@ -126,4 +126,18 @@ Diese Dokumentation ist wie folgt aufgebaut:
 | **5. Erweiterungsmöglichkeiten** | Skills, MCP-Server, Plugins, Custom Agents — praktischer Leitfaden |
 | **6. Ausblick** | Learnings aus dem Leak, offene Fragen, nächste Generation, Vergleich mit anderen Systemen |
 
+## 1.7 Lizenz
+
+Das npm-Paket enthält keine klassische Open-Source-Lizenz.
+Die `LICENSE.md` verweist einzeilig auf die proprietären Nutzungsbedingungen:
+
+> © Anthropic PBC. All rights reserved.
+> Use is subject to the Legal Agreements outlined here:
+> <https://code.claude.com/docs/en/legal-and-compliance>.
+
+Claude Code ist damit **keine** Open-Source-Software. Der hier analysierte
+Quellcode wurde nicht bewusst veröffentlicht (siehe Abschnitt 1.1).
+
+---
+
 > **Hinweis:** Alle Pfadangaben beziehen sich auf das Verzeichnis `src/` des geleakten Quellcodes. Dateireferenzen wie `main.tsx` meinen `src/main.tsx`.

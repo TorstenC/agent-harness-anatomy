@@ -12,6 +12,16 @@ Schwere Arbeit wird *nach* dem ersten Render angestoßen (Deferred Prefetches).
 
 ### Sequenz
 
+> **Hinweis zum Entrypoint:** Im veröffentlichten npm-Paket gibt es kein `cli.tsx`
+> als separate Datei. Bun bündelt den gesamten Quellcode in eine einzige Datei
+> `cli.js` (~16.700 Zeilen minifizierter Code), die per Shebang
+> (`#!/usr/bin/env node`) direkt als `claude`-Binary aufgerufen wird.
+> Die untenstehende Sequenz beschreibt die *logischen* Phasen innerhalb
+> dieses Bundles.
+>
+> Kommentar im Quellcode:
+> `// Want to see the unminified source? We're hiring!`
+
 ```text
 ┌───────────────────────────────────────────────────────────────────────┐
 │  cli.tsx  →  main.tsx  →  init.ts  →  setup.ts  →  replLauncher.tsx │

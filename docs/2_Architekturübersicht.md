@@ -80,6 +80,38 @@ Die folgende Tabelle zeigt die Top-Level-Verzeichnisse und ihre Verantwortlichke
 | `schemas/` | Infrastruktur | Zod-Schemas für Config-Validierung |
 | `migrations/` | Infrastruktur | Config-Migrationen (Modell-Renames, Setting-Umzüge) |
 
+### Paketstruktur und Bundling
+
+Das veröffentlichte npm-Paket (`@anthropic-ai/claude-code`) enthält **keine**
+Ordnerstruktur wie oben beschrieben. Bun bündelt den gesamten TypeScript-Quellcode
+in eine einzige Datei `cli.js` (~16.700 Zeilen minifizierter Code, Shebang
+`#!/usr/bin/env node`). Die `package.json` deklariert:
+
+```json
+"bin": { "claude": "cli.js" },
+"dependencies": {},
+"optionalDependencies": {
+  "@img/sharp-darwin-arm64": "^0.34.2",
+  "@img/sharp-linux-x64":   "^0.34.2"
+}
+```
+
+Bemerkenswert: Es gibt **keine** Runtime-Dependencies — alle Bibliotheken
+(Anthropic SDK, React, Ink, Commander.js, Zod, lodash, …) sind inline gebundelt.
+Nur die plattformspezifischen Sharp-Native-Binaries werden als
+`optionalDependencies` nachgeladen (9 Plattformen).
+
+Zusätzlich enthält das Paket gebundelte Binärdateien im `vendor/`-Verzeichnis:
+
+| Binary | Zweck |
+| --- | --- |
+| `vendor/ripgrep/` | Plattform-Binaries von ripgrep (`rg`) für `GrepTool` |
+| `vendor/audio-capture/` | NAPI-Bindings für Mikrofon-Aufnahme (Voice Mode) |
+
+Die `source/vendor/`-Quellen zeigen vier weitere NAPI-Module (Image-Processor,
+Keyboard-Modifier-Detection, URL-Handler), die alle dasselbe Muster verwenden:
+Lazy-Loading mit gecachtem Modul-Handle und plattformspezifischen Guards.
+
 ## 2.3 Startup-Ablauf
 
 Der Startup-Prozess folgt einem strikten, mehrstufigen Ablauf. Jede Phase baut auf der vorherigen auf:

@@ -211,7 +211,33 @@ die nur innerhalb dieses Agenten verfügbar sind.
 
 ---
 
-## 5.6 Zusammenfassung: Entscheidungshilfe
+## 5.6 SDK-Schnittstelle: sdk-tools.d.ts
+
+Das npm-Paket enthält neben dem gebündelten `cli.js` eine Datei
+`sdk-tools.d.ts` (2.720 Zeilen), die als **öffentliche TypeScript-API**
+für die programmgesteuerte Nutzung von Claude Code dient.
+
+Die Datei wurde automatisch aus JSON-Schema generiert
+(`json-schema-to-typescript`) und definiert alle Tool-Input- und
+Output-Typen als exportierte TypeScript-Interfaces:
+
+| Typ-Gruppe | Beispiele | Anzahl |
+| --- | --- | --- |
+| Tool-Inputs | `BashInput`, `FileEditInput`, `AgentInput`, `WebSearchInput` | 21 |
+| Tool-Outputs | `BashOutput`, `FileEditOutput`, `GrepOutput`, `McpOutput` | 20 |
+| Hilfstypen | `AgentOutput.usage`, `FileEditInput.old_string`, … | ~50 |
+
+Diese Typen korrespondieren exakt mit den internen Tool-Definitionen
+in `src/tools/` (beschrieben in [Kapitel 3.5](3_Hauptkomponenten.md#35-tool-system)).
+Sie ermöglichen type-safe SDK-Integration, z. B. für:
+
+- Programmgesteuertes Aufrufen von Claude Code per `--sdk-url`
+- Eigene Clients, die Claude-Code-Tool-Ergebnisse konsumieren
+- Validierung von Tool-Inputs in Test-Frameworks
+
+---
+
+## 5.7 Zusammenfassung: Entscheidungshilfe
 
 | Anforderung | Empfohlene Ebene |
 | --- | --- |
