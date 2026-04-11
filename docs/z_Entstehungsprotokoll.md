@@ -1715,7 +1715,18 @@ Erledigt! Commit `1a1dffc` ist gepusht. Zusammenfassung der drei Ergänzungen:
 ## Claude Opus 4.6 – Analyse des `claude-code-2.1.88/` Ordners
 <!-- TODO: Diesen Teil aus dem Original-Chat extrahieren:
 
-Gute Idee, das systematisch durchzugehen. Schauen wir uns an, was dort liegt und was wir davon noch nicht ausgewertet haben: Das gibt mir einen Überblick. Jetzt schaue ich mir die Schlüsseldateien an: Jetzt die `package.json` — das ist Gold für Abhängigkeiten, Scripts, Feature-Flags: Sehr aufschlussreich! Jetzt die `cli.js` — der tatsächliche Einstiegspunkt: Jetzt schaue ich mir die SDK-Typen an — das ist die öffentliche API-Definition: Jetzt prüfe ich die Vendor-Quellen — die sind bisher komplett unerwähnt: Jetzt die `source/src/` Verzeichnisstruktur — was gibt es, das wir in unserer src-Kopie vielleicht nicht haben? Ich vergleiche die Dateiliste beider Verzeichnisse, da wir src als lokale Arbeitskopie verwenden: Da sind interessante Unterschiede — `source/src/` hat Dateien in Unterordnern, die in unserer flachen src-Kopie möglicherweise fehlen. Lass mich systematisch prüfen: Jetzt prüfe ich die `vendor`-Quellen, die bisher komplett unerwähnt sind: Noch die Binärstruktur der `vendor/`-Ordner: Jetzt habe ich ein vollständiges Bild. Hier meine Analyse:
+Gute Idee, das systematisch durchzugehen.
+- Schauen wir uns an, was dort liegt und was wir davon noch nicht ausgewertet haben: Das gibt mir einen Überblick.
+- Jetzt schaue ich mir die Schlüsseldateien an:
+- Jetzt die `package.json` — das ist Gold für Abhängigkeiten, Scripts, Feature-Flags: Sehr aufschlussreich!
+- Jetzt die `cli.js` — der tatsächliche Einstiegspunkt:
+- Jetzt schaue ich mir die SDK-Typen an — das ist die öffentliche API-Definition:
+- Jetzt prüfe ich die Vendor-Quellen — die sind bisher komplett unerwähnt:
+- Jetzt die `source/src/` Verzeichnisstruktur — was gibt es, das wir in unserer src-Kopie vielleicht nicht haben? Ich vergleiche die Dateiliste beider Verzeichnisse, da wir src als lokale Arbeitskopie verwenden:
+- Da sind interessante Unterschiede — `source/src/` hat Dateien in Unterordnern, die in unserer flachen src-Kopie möglicherweise fehlen. Lass mich systematisch prüfen:
+- Jetzt prüfe ich die `vendor`-Quellen, die bisher komplett unerwähnt sind:
+- Noch die Binärstruktur der `vendor/`-Ordner:
+- Jetzt habe ich ein vollständiges Bild. Hier meine Analyse:
 
 ## Befund: Was in claude-code-2.1.88 steckt
 
@@ -1954,11 +1965,9 @@ Made changes.
 > Ist bei `w_Rust-Projekt_claw-code.md` noch ein Feinschliff nötig?
 Vor `## 1. …` soll ein Teaser stehen bleiben, aber es soll sich auch nicht viel Redundantes wiederholen. Vielleicht müssen sogar die Kapitel neu strukturiert werden. Falls du nicht unsicher bist und mich fragen möchtest, einfach anpassen und pushen, bitte.
 
-## Claw-Code — Rust-Implementierung von Anthropics Agent Harness
+## Anhang: Rust-Projekt `claw-code` — Einordnung und Abgrenzung
 
 <!-- TODO: Diesen Teil aus dem Original-Chat extrahieren:
-
-
 
 Ich lese die Datei nochmal vollständig und analysiere die Struktur: 
 

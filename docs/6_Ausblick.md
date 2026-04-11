@@ -42,7 +42,8 @@ AI-Agent-System intern aufgebaut ist.
    Die Wahl von React als UI-Framework für ein Terminal-Tool ist
    ungewöhnlich, aber ermöglicht ein komponentenbasiertes
    Permission-Dialog-System, das mit klassischen CLI-Frameworks
-   kaum realisierbar wäre.
+   kaum realisierbar wäre. Siehe
+   [Anhang: React/Ink als Terminal-UI](v_React-Ink-UI-Framework.md).
 
 ---
 
@@ -138,7 +139,8 @@ Muster als Industriestandard herauskristallisieren:
 
 - Die umfangreichste und am besten strukturierte Tool-Bibliothek
 - Ein ausgereiftes Permission-System mit Policy-Unterstützung
-- React/Ink als UI-Framework (einzigartig im Feld)
+- React/Ink als UI-Framework — einzigartig im Feld
+  (siehe [Anhang: React/Ink](v_React-Ink-UI-Framework.md))
 - Sub-Agent-Spawning mit eigenem Kontext
 
 ---

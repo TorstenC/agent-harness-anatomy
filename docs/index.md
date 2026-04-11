@@ -50,7 +50,8 @@ Die Dokumentation in diesem Repository erklärt, wie diese drei Teile zusammensp
 | [3. Hauptkomponenten](https://torstenc.github.io/agent-harness-anatomy/3_Hauptkomponenten) | ✅ | QueryEngine, Query-Schleife, Tool-System (Interface, Registry, Ausführung), Command-System, AgentTool, BashTool, Coordinator, Skills/Plugins |
 | [4. Typische Abläufe](https://torstenc.github.io/agent-harness-anatomy/4_Typische_Abläufe) | ✅ | Startup-Sequenz, Query-Lifecycle, Query-Schleife, Tool-Pipeline, Fallback & Recovery, Sub-Agent-Spawning, Session-Resume, Hooks, Timing |
 | [5. Erweiterungsmöglichkeiten](https://torstenc.github.io/agent-harness-anatomy/5_Erweiterungsmöglichkeiten) | ✅ | Skills, MCP-Server, Plugins, Custom Agents — praktischer Leitfaden mit Querverweisen |
-| [6. Ausblick](https://torstenc.github.io/agent-harness-anatomy/6_Ausblick) | ✅ | Learnings aus dem Leak, offene Fragen, nächste Generation, Vergleich mit Cursor/Windsurf/Cline/Aider |
+| [6. Ausblick](https://torstenc.github.io/agent-harness-anatomy/6_Ausblick) | ✅ | Learnings aus dem Leak, offene Fragen, nächste Generation, Vergleich mit Cursor/Windsurf/Cline/Aider |
+| Anhang: [React/Ink als Terminal-UI](https://torstenc.github.io/agent-harness-anatomy/v_React-Ink-UI-Framework) | ✅ | Warum React im Terminal? Ink-Architektur, Claude Codes Fork, Komponentenhierarchie, Render-Zyklus |
 | Anhang: [Rust-Projekt claw-code](https://torstenc.github.io/agent-harness-anatomy/w_Rust-Projekt_claw-code) | ✅ | Einordnung und Abgrenzung des öffentlichen Rust-Reimplementierungsprojekts ultraworkers/claw-code |
 | Anhang: [Kommentare von Gemini](https://torstenc.github.io/agent-harness-anatomy/x_Kommentare_von_Gemini) | ✅ | Exklusive Einblicke und Kommentare von Gemini (Google/Alphabet) zum Leak und zur Architektur |
 | Anhang: [Quellenverzeichnis](https://torstenc.github.io/agent-harness-anatomy/y_Quellenverzeichnis) | ✅ | Analysierte Quelldateien mit Links zu zwei öffentlichen Mirrors |
@@ -110,6 +111,7 @@ Jeder Tool-Aufruf durchläuft eine **5-stufige Permission-Pipeline**: Config-Rul
 │   ├── 4_Typische_Abläufe.md           ← Sequenzdiagramme & Abläufe
 │   ├── 5_Erweiterungsmöglichkeiten.md  ← Skills, MCP, Plugins, Custom Agents
 │   ├── 6_Ausblick.md                  ← Learnings, offene Fragen, Vergleich
+│   ├── v_React-Ink-UI-Framework.md     ← React/Ink als Terminal-UI-Framework
 │   ├── w_Rust-Projekt_claw-code.md     ← Einordnung des Rust-Reimplementierungsprojekts
 │   ├── x_Kommentare_von_Gemini.md      ← Kommentare von Gemini zum Leak
 │   ├── y_Quellenverzeichnis.md         ← Analysierte Quelldateien mit Links
