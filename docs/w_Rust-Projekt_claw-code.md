@@ -27,7 +27,7 @@ formelle Zugehörigkeit behauptet. ([README][1])
 | --- | --- | --- |
 | Sprache | TypeScript (strict) | Rust |
 | Runtime | Bun | Native Binary |
-| Terminal-UI | React + Ink | Eigene REPL |
+| Terminal-UI | React + Ink (geforkter TUI-Stack) | ratatui + crossterm (TUI) mit rustyline (REPL-Eingabe) |
 | Modulstruktur | ~1.900 Dateien in `src/` | Rust-Workspace mit Crates |
 | Crates / Module | — | `api`, `commands`, `runtime`, `tools`, `plugins`, `telemetry`, `rusty-claude-cli`, `mock-anthropic-service`, `compat-harness` |
 | Testinfrastruktur | Intern (nicht veröffentlicht) | Deterministischer Mock-Service, Parity-Szenarien |

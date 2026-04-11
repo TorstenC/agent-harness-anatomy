@@ -202,6 +202,7 @@ Support für flicker-freies Rendering und Alt-Screen-Management.
 | Framework | Ansatz | Layout | Komponentenmodell |
 | --- | --- | --- | --- |
 | **Ink** | React-Reconciler + Yoga | Flexbox | JSX-Komponenten + Hooks |
+| ratatui (Rust) | Immediate-Mode-Rendering | Manuelles Layout | Widget-Trait + Elm-artiger Loop |
 | blessed / neo-blessed | Eigenes Widget-System | Box-Modell | Event-basierte Widgets |
 | inquirer / prompts | Frage-Antwort-Ketten | Sequenziell | Prompt-Konfigurationen |
 | Commander.js / yargs | Argument-Parsing | Keine UI | CLI-Definitionen |
@@ -210,6 +211,9 @@ Support für flicker-freies Rendering und Alt-Screen-Management.
 Claude Code ist nicht allein mit der Wahl von Ink — auch **Gemini CLI**
 (Google), **Shopify CLI**, **GitHub Copilot CLI**, **Cloudflare Wrangler**
 und **Prisma** setzen auf Ink als Terminal-UI-Framework.
+Das Rust-Pendant `claw-code` verwendet stattdessen **ratatui** + **crossterm**
+mit **rustyline** für die REPL-Eingabezeile (siehe
+[Anhang: Rust-Projekt claw-code](w_Rust-Projekt_claw-code.md)).
 
 ---
 
